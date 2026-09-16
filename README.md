@@ -9,9 +9,9 @@ A single-page trip plan — route, budget, day-by-day itinerary and a pre-depart
 The whole site is one self-contained file: [`index.html`](index.html). No build step, no
 dependencies — open it in a browser to preview changes locally.
 
-Every push to `main` redeploys the site via
-[`.github/workflows/deploy.yml`](.github/workflows/deploy.yml), which usually takes under a
-minute. The workflow can also be run by hand from the **Actions** tab.
+Push to `main` and the site republishes itself, usually within a minute. That is GitHub's
+own builder, configured under **Settings → Pages → Source: _Deploy from a branch_ →
+`main` / `(root)`**. There is no workflow in this repository and none is needed.
 
-The first run switches Pages on by itself, so there is nothing to configure in the repository
-settings.
+Progress on the checklist and the exchange rate in the top bar are stored per-browser, so
+they do not travel between devices and are not part of the repository.
