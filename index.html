@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Japan, Feb 2027</title>
+<meta name="description" content="Tokyo-based trip plan for February 2027: flights, budget, day by day and a pre-departure checklist.">
+<meta name="theme-color" content="#00563F" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0E1A17" media="(prefers-color-scheme: dark)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Zen+Maru+Gothic:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:light dark;
+  --washi:#F2EFE7; --card:#FFFDF8; --sunk:#E9E4D8;
+  --sumi:#1A1F1D; --muted:#5D6B66; --line:#D2CCBC;
+  --midori:#00563F; --midori-ink:#FFFFFF;
+  --shu:#C4342B; --ai:#1B4A6B; --kin:#C79A22;
+  --warn-bg:#FBF3DC; --warn-line:#C79A22;
+  --good-bg:#E6F0EA;
+  --display:"Dela Gothic One","Hiragino Sans","Arial Black",Impact,sans-serif;
+  --round:"Zen Maru Gothic","Hiragino Maru Gothic ProN",sans-serif;
+  --body:"Zen Kaku Gothic New","Hiragino Sans","Segoe UI",Roboto,Arial,sans-serif;
+  --gut:20px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --washi:#0E1A17; --card:#172522; --sunk:#111D1A;
+    --sumi:#E8EDE9; --muted:#9BAEA8; --line:#2C403B;
+    --midori:#1F8A62; --midori-ink:#F2FFF9;
+    --shu:#E8695C; --ai:#6FA8CC; --kin:#E0B449;
+    --warn-bg:#2A2517; --warn-line:#8C6E1C;
+    --good-bg:#16302A;
+  }
+}
+:root[data-theme="dark"]{
+  --washi:#0E1A17; --card:#172522; --sunk:#111D1A;
+  --sumi:#E8EDE9; --muted:#9BAEA8; --line:#2C403B;
+  --midori:#1F8A62; --midori-ink:#F2FFF9;
+  --shu:#E8695C; --ai:#6FA8CC; --kin:#E0B449;
+  --warn-bg:#2A2517; --warn-line:#8C6E1C;
+  --good-bg:#16302A;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{
+  margin:0;background:var(--washi);color:var(--sumi);
+  font-family:var(--body);font-size:17px;line-height:1.65;
+  overflow-x:hidden;
+  /* asanoha-ish hemp leaf wash, very faint */
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='56' height='96' viewBox='0 0 56 96'><g fill='none' stroke='%2300563F' stroke-opacity='0.055' stroke-width='1'><path d='M28 0 L28 24 M28 24 L7 36 M28 24 L49 36 M7 12 L28 24 M49 12 L28 24 M28 48 L28 72 M28 72 L7 84 M28 72 L49 84 M7 60 L28 72 M49 60 L28 72'/><path d='M0 12 L0 36 M56 12 L56 36 M0 60 L0 84 M56 60 L56 84'/><path d='M28 24 L28 48 M7 36 L7 60 M49 36 L49 60 M28 72 L28 96'/></g></svg>");
+}
+img{max-width:100%;height:auto}
+a{color:var(--midori);text-underline-offset:3px;text-decoration-thickness:1.5px}
+a:hover{color:var(--shu)}
+:focus-visible{outline:3px solid var(--kin);outline-offset:2px;border-radius:3px}
+.wrap{max-width:900px;margin:0 auto;padding:0 var(--gut)}
+.wrap--pad{padding-left:max(var(--gut),env(safe-area-inset-left));padding-right:max(var(--gut),env(safe-area-inset-right))}
+
+h1,h2{font-family:var(--display);font-weight:400;letter-spacing:.01em;line-height:1.16;margin:0}
+h2{font-size:clamp(26px,5.4vw,38px);margin:0 0 6px}
+h3{font-size:18px;font-weight:700;margin:0 0 5px;line-height:1.35}
+p{margin:0 0 12px}
+.muted{color:var(--muted)}
+.y{font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
+.a{color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+
+/* eyebrow with Japanese label */
+.eyebrow{
+  font-family:var(--round);font-weight:700;font-size:13px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--midori);display:flex;align-items:center;gap:9px;margin:0 0 10px;
+}
+.eyebrow .jp{font-size:17px;letter-spacing:.06em;color:var(--shu);text-transform:none}
+.eyebrow::after{content:"";height:1px;flex:1;background:var(--line);min-width:20px}
+
+/* ---------- top bar: JR-style ---------- */
+.bar{
+  position:sticky;top:0;z-index:20;background:var(--midori);color:var(--midori-ink);
+  border-bottom:3px solid var(--kin);
+  padding-top:env(safe-area-inset-top);
+}
+.bar .inner{max-width:900px;margin:0 auto;display:flex;align-items:center;gap:10px;
+  padding:8px max(12px,env(safe-area-inset-right)) 8px max(12px,env(safe-area-inset-left));}
+.bar nav{
+  display:flex;gap:6px;overflow-x:auto;flex:1;scrollbar-width:none;
+  -webkit-overflow-scrolling:touch;scroll-snap-type:x proximity;
+  mask-image:linear-gradient(to right,transparent 0,#000 8px,#000 calc(100% - 30px),transparent 100%);
+  padding-right:4px;
+}
+.bar nav::-webkit-scrollbar{display:none}
+.bar nav a{
+  color:var(--midori-ink);text-decoration:none;font-size:14px;font-weight:500;
+  white-space:nowrap;padding:7px 11px;border-radius:999px;
+  border:1px solid rgba(255,255,255,.28);scroll-snap-align:start;min-height:36px;display:flex;align-items:center;
+}
+.bar nav a:hover,.bar nav a:focus-visible{background:rgba(255,255,255,.16)}
+.rate{display:flex;align-items:center;gap:5px;font-size:13px;font-weight:500;flex-shrink:0}
+.rate input{
+  width:58px;padding:6px;border-radius:5px;border:1px solid rgba(255,255,255,.4);
+  background:rgba(255,255,255,.95);color:#1A1F1D;font:inherit;font-weight:700;
+  font-variant-numeric:tabular-nums;min-height:34px;
+}
+.rate .lbl{opacity:.9}
+
+/* ---------- hero ---------- */
+header.hero{padding:40px 0 30px;border-bottom:5px solid var(--kin);background:linear-gradient(180deg,var(--sunk),transparent 70%)}
+.hero .kicker{font-family:var(--round);font-weight:700;color:var(--shu);letter-spacing:.1em;font-size:14px;margin:0 0 8px}
+.hero h1{font-size:clamp(40px,10.5vw,92px)}
+.hero h1 .jp{display:block;font-family:var(--round);font-size:clamp(15px,3.6vw,22px);letter-spacing:.3em;color:var(--muted);margin-bottom:10px;font-weight:500}
+.hero .sub{font-size:clamp(16.5px,2.5vw,20px);max-width:34em;margin-top:16px}
+.hero .dates{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 0;padding:0;list-style:none}
+.hero .dates li{
+  background:var(--card);border:1px solid var(--line);border-radius:999px;
+  padding:7px 14px;font-size:14.5px;
+}
+.hero .dates b{font-variant-numeric:tabular-nums}
+.hero .dates i{color:var(--kin);font-style:normal;font-weight:700;margin:0 4px}
+
+/* ---------- station plates ---------- */
+.plates{margin-top:26px}
+.plates h4{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 10px;font-weight:700}
+.plate-row{display:flex;flex-wrap:wrap;gap:10px}
+.plate{
+  background:var(--card);border:2px solid var(--midori);border-radius:8px;
+  padding:9px 13px;min-width:0;position:relative;overflow:hidden;
+}
+.plate::before{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--midori)}
+.plate .jp{font-family:var(--round);font-weight:700;font-size:17px;line-height:1.2;display:block}
+.plate .ro{display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:1px}
+.plate .meta{display:block;font-size:12.5px;color:var(--midori);font-weight:700;margin-top:4px}
+.plate.base{background:var(--midori);border-color:var(--midori)}
+.plate.base::before{background:var(--kin)}
+.plate.base .jp,.plate.base .meta{color:var(--midori-ink)}
+.plate.base .ro{color:rgba(255,255,255,.75)}
+.plate.base .jp{font-size:22px}
+.plate.out{border-color:var(--line);border-style:dashed}
+.plate.out::before{background:var(--line)}
+.plate.out .meta{color:var(--muted)}
+
+/* ---------- sections ---------- */
+section{padding:44px 0;border-bottom:1px solid var(--line)}
+section[id]{scroll-margin-top:70px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,235px),1fr));gap:12px}
+.fact{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:15px 17px}
+.fact h3{font-size:16.5px}
+.fact p{margin:0;font-size:15.5px}
+.fact.flag{background:var(--warn-bg);border-color:var(--warn-line)}
+.fact.ok{background:var(--good-bg)}
+
+/* ---------- ticket stub ---------- */
+.ticket{
+  background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;
+  box-shadow:0 1px 0 var(--line);
+}
+.ticket .thead{
+  background:var(--ai);color:#fff;padding:12px 16px;display:flex;flex-wrap:wrap;gap:6px 16px;
+  align-items:baseline;justify-content:space-between;
+}
+.ticket .thead b{font-family:var(--round);font-size:16px;letter-spacing:.04em}
+.ticket .thead span{font-size:13px;opacity:.9;font-variant-numeric:tabular-nums}
+.seg{
+  display:grid;grid-template-columns:auto 1fr auto;gap:4px 14px;align-items:center;
+  padding:13px 16px;border-top:1px dashed var(--line);
+}
+.seg:first-of-type{border-top:none}
+.seg .fno{font-family:var(--round);font-weight:700;color:var(--ai);font-size:14.5px;white-space:nowrap}
+.seg .path{font-weight:700;font-size:15.5px;line-height:1.4}
+.seg .path .arw{color:var(--kin);margin:0 5px;font-weight:400}
+.seg .when{text-align:right;font-size:14px;font-variant-numeric:tabular-nums;color:var(--muted);white-space:nowrap}
+.seg .when b{display:block;color:var(--sumi);font-size:15px}
+.seg .note{grid-column:1/-1;font-size:13.5px;color:var(--muted);margin:0}
+.ticket .tfoot{
+  background:var(--sunk);padding:12px 16px;display:flex;flex-wrap:wrap;gap:6px 20px;
+  justify-content:space-between;font-size:14.5px;
+}
+.ticket .tfoot b{font-variant-numeric:tabular-nums}
+
+/* ---------- tables ---------- */
+.tablebox{background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+table{border-collapse:collapse;width:100%}
+th,td{padding:11px 16px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+th{font-size:13.5px;color:var(--muted);font-weight:500}
+td.num,th.num{text-align:right;white-space:nowrap}
+td.num .a{display:block;font-size:13.5px}
+td .sm{display:block;font-size:14px;color:var(--muted);margin-top:2px}
+tr.group td{background:var(--sunk);font-weight:700;font-size:13.5px;color:var(--muted);letter-spacing:.04em}
+tr.total td{font-weight:700}
+tr.total.big td{font-size:17.5px;border-top:2px solid var(--sumi)}
+tr.total.win td{color:var(--midori)}
+tr:last-child td{border-bottom:none}
+.note{font-size:14px;color:var(--muted);margin-top:10px}
+
+.callout{background:var(--warn-bg);border-left:5px solid var(--warn-line);padding:14px 17px;margin:18px 0;border-radius:0 8px 8px 0}
+.callout p:last-child{margin:0}
+.callout h3{margin-bottom:6px}
+.callout.good{background:var(--good-bg);border-left-color:var(--midori)}
+
+/* ---------- day by day ---------- */
+.leg{margin-top:34px}
+.leg:first-of-type{margin-top:0}
+.leghead{
+  display:inline-flex;align-items:center;gap:11px;background:var(--midori);color:var(--midori-ink);
+  padding:8px 15px;border-radius:7px;margin-bottom:4px;flex-wrap:wrap;
+}
+.leghead b{font-family:var(--round);font-weight:700;font-size:19px}
+.leghead span{font-size:13.5px;opacity:.9;font-variant-numeric:tabular-nums}
+ol.days{list-style:none;margin:0;padding:0}
+.day{display:grid;grid-template-columns:62px 1fr;gap:16px;padding:17px 0;border-bottom:1px dashed var(--line)}
+.day:last-child{border-bottom:none}
+.dn{
+  font-family:var(--round);font-weight:700;font-size:14px;color:var(--midori-ink);
+  background:var(--midori);border-radius:7px;padding:6px 4px;text-align:center;height:max-content;
+}
+.dn small{display:block;font-weight:500;font-size:11.5px;opacity:.85;margin-top:1px;letter-spacing:.02em}
+.day.pin .dn{background:var(--shu)}
+.day.rest .dn{background:var(--ai)}
+.day h3 .tag{
+  display:inline-block;font-size:11.5px;font-weight:700;vertical-align:2px;margin-left:7px;
+  padding:1px 7px;border-radius:999px;background:var(--sunk);color:var(--muted);letter-spacing:.04em;
+}
+.day h3 .tag.car{background:var(--shu);color:#fff}
+.day h3 .tag.big{background:var(--kin);color:#2A2205}
+.day p{margin:0 0 8px;font-size:16px}
+ul.costs{list-style:none;margin:0;padding:0;font-size:15px}
+ul.costs li{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:3px 0;border-top:1px solid var(--line)}
+ul.costs li:first-child{border-top:none}
+ul.costs li>span:first-child{color:var(--muted)}
+.opt{display:inline-block;font-size:11.5px;font-weight:700;color:var(--shu);border:1px solid var(--shu);border-radius:4px;padding:0 6px;margin-left:6px;vertical-align:2px}
+
+/* ---------- panels ---------- */
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr));gap:16px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px}
+.panel h3 .jp{font-family:var(--round);color:var(--shu);font-size:14px;margin-left:7px;font-weight:700}
+.panel ul{margin:8px 0 0;padding-left:19px;font-size:15.5px}
+.panel li{margin-bottom:8px}
+.panel li:last-child{margin-bottom:0}
+.panel p{font-size:15.5px}
+
+/* ---------- checklist ---------- */
+ol.check{list-style:none;padding:0;margin:0;counter-reset:c}
+ol.check li{
+  counter-increment:c;display:grid;grid-template-columns:30px 1fr;gap:12px;align-items:start;
+  padding:13px 0;border-bottom:1px solid var(--line);
+}
+ol.check li:last-child{border-bottom:none}
+ol.check li::before{
+  content:counter(c);font-family:var(--round);font-weight:700;color:var(--muted);font-size:14px;
+  background:var(--sunk);border-radius:50%;width:30px;height:30px;display:flex;align-items:center;justify-content:center;
+}
+ol.check label{cursor:pointer;display:flex;gap:11px;align-items:flex-start;min-height:30px;padding-top:2px}
+ol.check input{width:22px;height:22px;margin:3px 0 0;accent-color:var(--midori);flex-shrink:0}
+ol.check li.done label{text-decoration:line-through;text-decoration-color:var(--muted);color:var(--muted)}
+ol.check .when{display:block;font-size:13.5px;color:var(--shu);font-weight:700;margin-top:3px;text-decoration:none}
+ol.check li.done .when{color:var(--muted)}
+
+footer{padding:30px 0 50px;font-size:14px;color:var(--muted)}
+footer .wrap{padding-bottom:env(safe-area-inset-bottom)}
+
+/* ---------- mobile ---------- */
+@media (max-width:640px){
+  :root{--gut:16px}
+  body{font-size:16px}
+  section{padding:34px 0}
+  .hero{padding:28px 0 24px}
+  .day{grid-template-columns:1fr;gap:9px}
+  .dn{display:inline-flex;align-items:baseline;gap:7px;padding:5px 11px;width:max-content;font-size:13px}
+  .dn small{display:inline;margin:0}
+  .dn small::before{content:"· "}
+  .seg{grid-template-columns:1fr auto;gap:3px 12px}
+  .seg .fno{grid-column:1/-1;font-size:13px}
+  /* budget table becomes stacked cards */
+  table,tbody,tr,td{display:block;width:100%}
+  thead{display:none}
+  tbody tr{border-bottom:1px solid var(--line);padding:11px 15px}
+  tbody tr:last-child{border-bottom:none}
+  tbody tr.group{padding:9px 15px}
+  td{border:none;padding:0}
+  td.num{
+    display:flex;justify-content:space-between;align-items:baseline;gap:12px;
+    text-align:right;margin-top:5px;font-size:15px;
+  }
+  td.num::before{content:attr(data-label);color:var(--muted);font-size:13.5px;font-weight:500;text-align:left}
+  td.num .a{display:inline;font-size:13px;margin-left:6px}
+  tr.total.big td{font-size:16.5px}
+  tr.total.big td:first-child{border-top:none}
+  .ticket .thead,.ticket .tfoot{flex-direction:column;gap:3px}
+}
+@media (max-width:420px){
+  .hero h1{font-size:clamp(34px,11vw,44px)}
+  .plate.base .jp{font-size:19px}
+  .rate .lbl{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="bar">
+  <div class="inner">
+    <nav aria-label="Sections">
+      <a href="#flights">Flights</a>
+      <a href="#entry">Getting in</a>
+      <a href="#budget">Budget</a>
+      <a href="#days">Day by day</a>
+      <a href="#cars">Cars</a>
+      <a href="#city">Anime &amp; shopping</a>
+      <a href="#ship">Shipping home</a>
+      <a href="#prep">Before we go</a>
+    </nav>
+    <label class="rate" for="rate"><span class="lbl">A$1 =</span> ¥<input id="rate" type="number" min="50" max="250" step="1" value="110" inputmode="decimal" aria-label="Yen per Australian dollar"></label>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap wrap--pad">
+    <p class="kicker">Booked · Cathay Pacific</p>
+    <h1><span class="jp">にほん・2027年2月</span>Japan,<br>February 2027</h1>
+    <p class="sub">Eighteen nights, two of us, <strong>one twin room in Shinjuku the whole way</strong>. Cars, anime, streetwear and a couple of big nights out. Budget is A$7,000 each and this plan comes to about <strong id="heroTotal">A$5,890</strong> each, leaving the rest for shopping.</p>
+    <ul class="dates">
+      <li><b>Mon 1 Feb</b> <i>→</i> <b>Fri 19 Feb 2027</b></li>
+      <li>18 nights</li>
+      <li>Narita in, Narita out</li>
+    </ul>
+
+    <div class="plates">
+      <h4>Base</h4>
+      <div class="plate-row">
+        <div class="plate base"><span class="jp">新宿</span><span class="ro">Shinjuku</span><span class="meta">18 nights · never repack</span></div>
+      </div>
+      <h4 style="margin-top:18px">Days out</h4>
+      <div class="plate-row">
+        <div class="plate"><span class="jp">大黒</span><span class="ro">Daikoku PA</span><span class="meta">Fri 5 Feb · JDM convoy</span></div>
+        <div class="plate"><span class="jp">二本松</span><span class="ro">Nihonmatsu</span><span class="meta">Tue 9 Feb · Ebisu drift</span></div>
+        <div class="plate"><span class="jp">横浜</span><span class="ro">Yokohama</span><span class="meta">Sun 7 Feb</span></div>
+        <div class="plate"><span class="jp">富士急</span><span class="ro">Fuji-Q</span><span class="meta">Fri 12 Feb</span></div>
+        <div class="plate out"><span class="jp">町田</span><span class="ro">Machida</span><span class="meta">Up Garage</span></div>
+      </div>
+    </div>
+
+    <p class="note">Prices show yen first, then an AUD estimate. Change the rate in the top bar and every AUD figure updates. ¥110 is the default to leave a buffer; the market sat near ¥113–114 through mid 2026. A <strong>~</strong> means the figure is an estimate.</p>
+  </div>
+</header>
+
+<main>
+
+<section id="flights">
+  <div class="wrap wrap--pad">
+    <p class="eyebrow"><span class="jp">航空券</span> Flights</p>
+    <h2>What's booked</h2>
+    <p class="muted">Ticketed 22 Sep 2026. Everything below is locked in, so the rest of the plan is built around it.</p>
+
+    <div class="ticket">
+      <div class="thead">
+        <b>PERTH → TOKYO NARITA</b>
+        <span>Cathay Pacific · Economy (Q)</span>
+      </div>
+      <div class="seg">
+        <span class="fno">CX 140</span>
+        <span class="path">Perth <span class="arw">→</span> Hong Kong</span>
+        <span class="when"><b>00:25 → 08:05</b>Mon 1 Feb · 7h 40m</span>
+      </div>
+      <div class="seg">
+        <span class="fno">CX 504</span>
+        <span class="path">Hong Kong <span class="arw">→</span> Tokyo Narita <span class="muted" style="font-weight:400">T2</span></span>
+        <span class="when"><b>09:05 → 14:05</b>Mon 1 Feb · 4h 00m</span>
+        <p class="note seg-note" style="grid-column:1/-1;margin:2px 0 0">One hour to connect in Hong Kong. Bags are checked through to Tokyo.</p>
+      </div>
+      <div class="seg">
+        <span class="fno">CX 521</span>
+        <span class="path">Tokyo Narita <span class="arw">→</span> Hong Kong</span>
+        <span class="when"><b>16:50 → 21:10</b>Fri 19 Feb · 5h 20m</span>
+      </div>
+      <div class="seg">
+        <span class="fno">CX 143</span>
+        <span class="path">Hong Kong <span class="arw">→</span> Perth</span>
+        <span class="when"><b>23:15 → 06:55</b>Fri 19 → Sat 20 Feb</span>
+      </div>
+      <div class="tfoot">
+        <span>Fare A$468.00 + taxes A$237.46 + carrier fees A$612.60</span>
+        <span><b>A$1,318.06</b> each</span>
+      </div>
+    </div>
+
+
+    <div class="facts" style="margin-top:20px">
+      <div class="fact ok"><h3>Day 1 lands on a Monday</h3><p>So Day 5 falls on Friday 5 Feb, and Friday night is when Daikoku is worth going to.</p></div>
+      <div class="fact"><h3>Getting to Shinjuku</h3><p>The Narita Express runs direct, <span data-yen="3250"></span> each way, about 80 minutes. The ¥5,000 round-trip tourist ticket is <strong>only valid 14 days</strong>, so on a 19-day trip it won't cover the return, so buy two singles.</p></div>
+      <div class="fact"><h3>Cheaper options in</h3><p>Keisei Skyliner plus the Yamanote is <span data-yen="2730"></span>. The Odakyu/Access bus is about <span data-yen="1300" data-approx></span> but slower. The N'EX is worth it on arrival day.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="entry">
+  <div class="wrap wrap--pad">
+    <p class="eyebrow"><span class="jp">入国</span> Getting in</p>
+    <h2>Paperwork</h2>
+    <div class="facts">
+      <div class="fact"><h3>No visa</h3><p>Australian passports get up to 90 days visa-free. Check the passport is valid well past 20 Feb 2027.</p></div>
+      <div class="fact"><h3>No JESTA yet</h3><p>Japan's e-travel authorisation isn't expected until 2028. Ignore any site charging to "register" you.</p></div>
+      <div class="fact"><h3>Visit Japan Web</h3><p>Free. Fill it in about a week out for the immigration and customs QR codes. From late 2026 it also handles the tax refund at Narita.</p></div>
+      <div class="fact flag"><h3>Tax-free changed in Nov 2026</h3><p>You <strong>pay the full tax-inclusive price</strong> and claim the 10% back at the airport before bag drop. Scan your passport at a terminal: green means done, red means customs wants to see the goods.</p></div>
+      <div class="fact"><h3>¥5,000 minimum</h3><p>Per store, per day, before tax. General goods and consumables count together, so it is easier to clear than you might expect. Keep every receipt.</p></div>
+      <div class="fact"><h3>Departure tax</h3><p><span data-yen="1000"></span> each, already inside the ticket price.</p></div>
+    </div>
+    <div class="callout">
+      <h3>The refund and the shipping don't mix automatically</h3>
+      <p>The refund is confirmed by you exporting the goods, so anything already posted home isn't in your bag when customs asks. If you want the 10% back on a big purchase, either carry it out yourself or ask the store to handle it as a <strong>direct export shipment</strong> at the counter. Plenty of the big Akihabara and Shinjuku stores do. Worth asking before you pay, not after.</p>
+    </div>
+  </div>
+</section>
+
+<section id="budget">
+  <div class="wrap wrap--pad">
+    <p class="eyebrow"><span class="jp">予算</span> Budget</p>
+    <h2>Where the money goes</h2>
+    <div class="tablebox">
+      <table>
+        <thead><tr><th>Item</th><th class="num">For both of us</th><th class="num">Each</th></tr></thead>
+        <tbody id="budgetBody">
+          <tr class="group"><td colspan="3">Already paid</td></tr>
+          <tr data-kind="base" data-aud="2636"><td>Return flights, Perth to Tokyo Narita<span class="sm">Cathay Economy Light via Hong Kong. A$1,318.06 each, confirmed rather than estimated.</span></td><td class="num" data-label="For both of us"></td><td class="num" data-label="Each"></td></tr>
+          <tr class="group"><td colspan="3">To pay in AUD before we go</td></tr>
+          <tr data-kind="base" data-aud="360"><td>Travel insurance and eSIMs<span class="opt">estimate</span></td><td class="num" data-label="For both of us"></td><td class="num" data-label="Each"></td></tr>
+          <tr class="group"><td colspan="3">Stays, travel, food</td></tr>
+          <tr data-kind="base" data-yen="306000"><td>18 nights, one twin room in Shinjuku<span class="sm">About ¥17,000 a night for somewhere central enough to walk home from Golden Gai.</span></td><td class="num" data-label="For both of us"></td><td class="num" data-label="Each"></td></tr>
+          <tr data-kind="base" data-yen="108000"><td>All transport<span class="sm">Narita Express both ways, daily metro, the Ebisu run, the Fuji-Q coach and late-night taxis. No luggage forwarding needed now.</span></td><td class="num" data-label="For both of us"></td><td class="num" data-label="Each"></td></tr>
+          <tr data-kind="base" data-yen="180000"><td>Food, about ¥5,000 each a day<span class="sm">Konbini breakfasts, cheap lunches, a few splurge dinners.</span></td><td class="num" data-label="For both of us"></td><td class="num" data-label="Each"></td></tr>
+          <tr class="total"><td>Base trip</td><td class="num" data-label="For both of us" id="tBase"></td><td class="num" data-label="Each" id="tBaseEach"></td></tr>
+          <tr class="group"><td colspan="3">The fun stuff</td></tr>
+          <tr data-kind="extra" data-yen="64000"><td>Daikoku self-drive convoy, one car, both driving<span class="sm">¥55,000 plus ¥3,300 for the second driver, plus tax. Fuel and tolls included.</span></td><td class="num" data-label="For both of us"></td><td class="num" data-label="Each"></td></tr>
+          <tr data-kind="extra" data-yen="136400"><td>Ebisu drift day, AE86 Ride &amp; Drive for both<span class="sm">¥66,000 each, covering the hot laps plus two ten-minute sessions on the Kuru Kuru drift pad, and the ¥2,200 gate fee. Transport is in the line above.</span></td><td class="num" data-label="For both of us"></td><td class="num" data-label="Each"></td></tr>
+          <tr data-kind="extra" data-yen="15000"><td>Fuji-Q Highland day passes<span class="opt">estimate</span></td><td class="num" data-label="For both of us"></td><td class="num" data-label="Each"></td></tr>
+          <tr data-kind="extra" data-yen="25000"><td>Other entries<span class="sm">Shibuya Sky, Cup Noodles Museum, teamLab, Gundam Base, Ueno museums, sento soaks, arcades.</span></td><td class="num" data-label="For both of us"></td><td class="num" data-label="Each"></td></tr>
+          <tr data-kind="extra" data-yen="36000"><td>Shiatsu, four sessions each<span class="sm">Neighbourhood chains, about ¥4,500 an hour.</span></td><td class="num" data-label="For both of us"></td><td class="num" data-label="Each"></td></tr>
+          <tr data-kind="extra" data-yen="60000"><td>Two big nights out, plus casual drinks<span class="sm">A guided izakaya crawl and one Golden Gai / Kabukicho night, then normal drinking.</span></td><td class="num" data-label="For both of us"></td><td class="num" data-label="Each"></td></tr>
+          <tr data-kind="extra" data-yen="35000"><td>Shipping purchases home<span class="opt">estimate</span><span class="sm">Two 10 kg boxes by courier. See <a href="#ship">Shipping home</a> for the options.</span></td><td class="num" data-label="For both of us"></td><td class="num" data-label="Each"></td></tr>
+          <tr class="total big"><td>Everything</td><td class="num" data-label="For both of us" id="tReal"></td><td class="num" data-label="Each" id="tRealEach"></td></tr>
+          <tr class="group"><td colspan="3">What's left</td></tr>
+          <tr><td>Our budget</td><td class="num" data-label="For both of us"><span class="y">A$14,000</span></td><td class="num" data-label="Each"><span class="y">A$7,000</span></td></tr>
+          <tr class="total big win"><td>Left for shopping</td><td class="num" data-label="For both of us" id="tLeft"></td><td class="num" data-label="Each" id="tLeftEach"></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">The Ebisu line buys the <strong>AE86 Ride &amp; Drive</strong> at <span data-yen="66000"></span> each rather than ¥25,000 for hot laps alone. If it turns out not to be running on the day, dropping back to hot laps returns about <strong>A$300 each</strong> to the shopping money.</p>
+  </div>
+</section>
+
+<section id="days">
+  <div class="wrap wrap--pad">
+    <p class="eyebrow"><span class="jp">日程</span> Day by day</p>
+    <h2>Nineteen days</h2>
+    <p class="muted">Red day numbers are the ones with something booked that can't move. Blue ones are deliberately soft: recovery, or a public holiday when everything's packed. Train and entry prices are each.</p>
+
+    <div class="leg">
+      <div class="leghead"><b>Week one</b><span>Mon 1 – Sun 7 Feb</span></div>
+      <ol class="days">
+        <li class="day pin"><div class="dn">Day 1<small>Mon 1 Feb</small></div><div>
+          <h3>Land, get to Shinjuku, eat <span class="tag">arrive</span></h3>
+          <p>Narita at 14:05. Visit Japan Web QR codes through immigration and customs, cash out of an ATM, Narita Express to Shinjuku and check in. You'll have been travelling about twenty hours, so keep it to a short walk and yakitori in Omoide Yokocho, then sleep.</p>
+          <ul class="costs"><li><span>Narita Express to Shinjuku</span><span data-yen="3250"></span></li><li><span>Yakitori and a couple of beers</span><span data-yen="2500" data-approx></span></li></ul>
+        </div></li>
+        <li class="day"><div class="dn">Day 2<small>Tue 2 Feb</small></div><div>
+          <h3>Harajuku, Shibuya, first massage <span class="tag">shopping</span></h3>
+          <p>Gentle jet-lag day on foot. Ura-Harajuku backstreets and Cat Street for streetwear, Honda Welcome Plaza in Aoyama on the way through (free), then Shibuya Sky for sunset and the crossing after dark. Shiatsu in the evening to get the flight out of your back.</p>
+          <ul class="costs"><li><span>Shibuya Sky, booked ahead</span><span data-yen="2700" data-approx></span></li><li><span>Shiatsu, 60 min</span><span data-yen="3000-6000" data-approx></span></li></ul>
+        </div></li>
+        <li class="day"><div class="dn">Day 3<small>Wed 3 Feb</small></div><div>
+          <h3>Akihabara <span class="tag">anime</span></h3>
+          <p>Yodobashi Akiba for tech, Super Potato for retro games and consoles, Mandarake Complex over eight floors, Animate, and the GiGO arcades when your legs go. Easy izakaya nearby afterwards, and save the real drinking for Saturday.</p>
+          <ul class="costs"><li><span>Arcade games, per play</span><span data-yen="100-200"></span></li><li><span>Izakaya dinner</span><span data-yen="2500-3500" data-approx></span></li></ul>
+        </div></li>
+        <li class="day"><div class="dn">Day 4<small>Thu 4 Feb</small></div><div>
+          <h3>Nakano and Ikebukuro <span class="tag">anime</span></h3>
+          <p>Nakano Broadway first, for the Mandarake flagship spread over dozens of little units and the best place in the city for older figures and oddities. Then four stops to Ikebukuro for the Animate flagship, Sunshine City and the Pokémon Centre.</p>
+          <ul class="costs"><li><span>Trains for the day</span><span data-yen="500" data-approx></span></li></ul>
+        </div></li>
+        <li class="day pin"><div class="dn">Day 5<small>Fri 5 Feb</small></div><div>
+          <h3>Daikoku, self-drive <span class="tag car">cars</span></h3>
+          <p>The one fixed booking. Nissan Crossing in Ginza in the morning and keep the day light. 5pm pickup from OnlyJDM at Haneda, both of you driving: A PIT Autobacs, then Daikoku PA itself, then a Tokyo Tower photo stop. Fuel and tolls included, car assigned on the day. Friday night is the right night for this.</p>
+          <ul class="costs"><li><span>Self-drive tour, per car, plus tax</span><span data-yen="55000"></span></li><li><span>Second driver</span><span data-yen="3300"></span></li><li><span>Fallback: passenger tour, per car</span><span data-yen="35000"></span></li></ul>
+        </div></li>
+        <li class="day pin"><div class="dn">Day 6<small>Sat 6 Feb</small></div><div>
+          <h3>Asakusa, a soak, then the big one <span class="tag big">night out 1</span></h3>
+          <p>Late start. Senso-ji and Nakamise in Asakusa in the afternoon, then a proper hot soak at Thermae-yu back in Shinjuku. At night, the guided izakaya and bar crawl, with someone else ordering across five or six places, which is the way to learn what you actually like. Golden Gai after if you're still upright, and you can walk home.</p>
+          <ul class="costs"><li><span>Onsen entry</span><span data-yen="1000-3000" data-approx></span></li><li><span>Guided food and bar crawl</span><span data-yen="10000-15000" data-approx></span></li><li><span>Golden Gai cover, per bar</span><span data-yen="500-1500" data-approx></span></li></ul>
+        </div></li>
+        <li class="day"><div class="dn">Day 7<small>Sun 7 Feb</small></div><div>
+          <h3>Yokohama <span class="tag car">cars</span><span class="tag">day trip</span></h3>
+          <p>Thirty minutes out. Nissan Global HQ Gallery is free and right at Yokohama station: GT-Rs, heritage cars, sometimes a ride in one. Then the Cup Noodles Museum to make your own, the Shin-Yokohama Ramen Museum for regional bowls, and Chinatown for dinner. Daikoku is out in the bay here, so you'll recognise the skyline from Friday.</p>
+          <ul class="costs"><li><span>Trains, return</span><span data-yen="1000" data-approx></span></li><li><span>Nissan HQ Gallery</span><span>Free</span></li><li><span>Cup Noodles Museum, plus your own cup</span><span data-yen="1000" data-approx></span></li></ul>
+        </div></li>
+      </ol>
+    </div>
+
+    <div class="leg">
+      <div class="leghead"><b>Week two</b><span>Mon 8 – Sun 14 Feb</span></div>
+      <ol class="days">
+        <li class="day"><div class="dn">Day 8<small>Mon 8 Feb</small></div><div>
+          <h3>Odaiba and the bay <span class="tag car">cars</span><span class="tag">anime</span></h3>
+          <p>Best combined day of the trip. The Unicorn Gundam outside DiverCity and the Gundam Base inside it, then A PIT Autobacs at Shinonome for parts and merch, teamLab Planets in Toyosu if you fancy it, and a taxi to Tatsumi PA after dark, the closest thing to Daikoku you can reach without a hire car.</p>
+          <ul class="costs"><li><span>Gundam statue</span><span>Free</span></li><li><span>teamLab Planets</span><span data-yen="3800" data-approx><span class="opt">optional</span></span></li><li><span>Taxi to Tatsumi and back</span><span data-yen="4000" data-approx></span></li></ul>
+        </div></li>
+        <li class="day pin"><div class="dn">Day 9<small>Tue 9 Feb</small></div><div>
+          <h3>Ebisu Circuit <span class="tag car">cars</span><span class="tag big">big day</span></h3>
+          <p>Up early. Shinkansen to Koriyama, local train to Nihonmatsu, taxi to the circuit, or take the tour that collects you from the hotel and skips all of that. The <strong>AE86 Ride &amp; Drive</strong>: three hot laps each with a pro on Kita, Nishi or Touge, then two ten-minute sessions of your own on the Kuru Kuru drift pad. Bring the IDP, same paperwork as Daikoku. Fukushima in February is genuinely cold, so wear everything.</p>
+          <ul class="costs"><li><span>AE86 Ride &amp; Drive, each</span><span data-yen="66000"></span></li><li><span>Gate fee, includes insurance</span><span data-yen="2200"></span></li><li><span>Return transport</span><span data-yen="20000" data-approx></span></li><li><span>If it's unavailable: hot laps only</span><span data-yen="25000"><span class="opt">fallback</span></span></li></ul>
+        </div></li>
+        <li class="day rest"><div class="dn">Day 10<small>Wed 10 Feb</small></div><div>
+          <h3>The Odakyu line: Up Garage and vintage <span class="tag car">cars</span><span class="tag">shopping</span></h3>
+          <p>One train line, two things you want. <strong>Up Garage Machida</strong> is the chief store, about 35 minutes out from Shinjuku: secondhand exhausts, suspension, wheels, gauges, ECUs and audio, and they do tax-free. Stop at Shimokitazawa on the way back, seven minutes from home, for secondhand clothes and tiny bars. Second massage.</p>
+          <ul class="costs"><li><span>Odakyu line, return</span><span data-yen="900" data-approx></span></li><li><span>Shiatsu, 60 min</span><span data-yen="3000-6000" data-approx></span></li></ul>
+        </div></li>
+        <li class="day rest"><div class="dn">Day 11<small>Thu 11 Feb</small></div><div>
+          <h3>Public holiday, nothing booked <span class="tag">soft day</span></h3>
+          <p>National Foundation Day. Ebisu shuts for major holidays and everywhere else fills up, so this is deliberately empty. Wander: Shinjuku Gyoen, Meiji Jingu, the food halls under the department stores, Kabukicho Tower, Koenji for cheap bars in the evening. Whatever you didn't finish earlier in the week.</p>
+          <ul class="costs"><li><span>Shinjuku Gyoen</span><span data-yen="500"></span></li><li><span>Drinks in Koenji, per drink</span><span data-yen="500-800" data-approx></span></li></ul>
+        </div></li>
+        <li class="day pin"><div class="dn">Day 12<small>Fri 12 Feb</small></div><div>
+          <h3>Fuji-Q Highland <span class="tag">day trip</span></h3>
+          <p>Direct highway bus from Shinjuku's Busta terminal, about an hour forty. Fujiyama, Eejanaika and Takabisha with Mt Fuji behind them, and February is the quietest month of the year for queues, which is worth it for that alone. Clear day and you get the mountain; cloudy and you still get the coasters.</p>
+          <ul class="costs"><li><span>Highway bus, each way</span><span data-yen="2200"></span></li><li><span>One-day pass</span><span data-yen="7200-7900" data-approx></span></li></ul>
+        </div></li>
+        <li class="day pin"><div class="dn">Day 13<small>Sat 13 Feb</small></div><div>
+          <h3>Restock, then the last big night <span class="tag big">night out 2</span></h3>
+          <p>Daytime is a second pass at whatever you want doubles of: Shibuya, Harajuku, Nakameguro and Daikanyama for the quieter end of streetwear. Then the other big night: Golden Gai's shoebox bars, Kabukicho, and a nomihodai set somewhere if you want it cheap. Saturday is the right night and you're ten minutes from bed.</p>
+          <ul class="costs"><li><span>Nomihodai set, all you can drink</span><span data-yen="1500-2500" data-approx></span></li><li><span>Golden Gai cover, per bar</span><span data-yen="500-1500" data-approx></span></li></ul>
+        </div></li>
+        <li class="day rest"><div class="dn">Day 14<small>Sun 14 Feb</small></div><div>
+          <h3>Do very little <span class="tag">soft day</span></h3>
+          <p>Third massage, a long sento soak, a slow lunch. It's Valentine's Day, which in Japan means the department store basements turn into chocolate halls, genuinely worth walking through even if you buy nothing. Early night.</p>
+          <ul class="costs"><li><span>Shiatsu, 60 min</span><span data-yen="3000-6000" data-approx></span></li><li><span>Sento</span><span data-yen="550" data-approx></span></li></ul>
+        </div></li>
+      </ol>
+    </div>
+
+    <div class="leg">
+      <div class="leghead"><b>Last stretch</b><span>Mon 15 – Fri 19 Feb</span></div>
+      <ol class="days">
+        <li class="day"><div class="dn">Day 15<small>Mon 15 Feb</small></div><div>
+          <h3>Ueno, Ameyoko and Yanaka <span class="tag">shopping</span></h3>
+          <p>The half of Tokyo the rest of the week never touches. Ameyoko market runs under the train tracks: sneakers, bags, street food, and the one place in the city where haggling works. Ueno Park and its museums if the weather holds, then Yanaka for low-rise streets that survived the war, which is about as far from Shinjuku as Tokyo gets.</p>
+          <ul class="costs"><li><span>Trains for the day</span><span data-yen="500" data-approx></span></li><li><span>Tokyo National Museum</span><span data-yen="1000" data-approx><span class="opt">optional</span></span></li></ul>
+        </div></li>
+        <li class="day"><div class="dn">Day 16<small>Tue 16 Feb</small></div><div>
+          <h3>Second pass on the anime run <span class="tag">anime</span></h3>
+          <p>You'll have a list by now: the figure you didn't buy in Nakano, the game you saw in Akihabara, the size they didn't have in Ikebukuro. This is the day for it, while there's still time to ship. Fourth massage.</p>
+          <ul class="costs"><li><span>Trains for the day</span><span data-yen="600" data-approx></span></li><li><span>Shiatsu, 60 min</span><span data-yen="3000-6000" data-approx></span></li></ul>
+        </div></li>
+        <li class="day pin"><div class="dn">Day 17<small>Wed 17 Feb</small></div><div>
+          <h3>Pack the boxes and ship them <span class="tag">logistics</span></h3>
+          <p>Two clear days before the flight, which is the point. Lay everything out, split it into boxes, weigh it, and hand it over. Hotel reception will usually take a courier pickup, or walk it to a Japan Post branch. Keep anything you want the tax refund on <em>out</em> of the boxes. Quiet dinner after.</p>
+          <ul class="costs"><li><span>Courier, per 10 kg box</span><span data-yen="16500" data-approx></span></li><li><span>Boxes and tape</span><span data-yen="1500" data-approx></span></li></ul>
+        </div></li>
+        <li class="day"><div class="dn">Day 18<small>Thu 18 Feb</small></div><div>
+          <h3>Last full day <span class="tag">loose ends</span></h3>
+          <p>Anything unfinished, a last walk around the neighbourhood you'll miss, souvenirs that need to stay in the bag, and a good farewell dinner, either wagyu or a proper sushi counter. Pack tonight, not tomorrow. Sort the tax-free receipts into one envelope.</p>
+          <ul class="costs"><li><span>Send-off dinner</span><span data-yen="6000-12000" data-approx></span></li></ul>
+        </div></li>
+        <li class="day pin"><div class="dn">Day 19<small>Fri 19 Feb</small></div><div>
+          <h3>Narita, and the tax refund <span class="tag">fly home</span></h3>
+          <p>Leave Shinjuku around 11:30 for a 16:50 departure. At Narita, do the tax refund <strong>before</strong> you drop the bags, with your passport at the terminal or in Visit Japan Web. Green and you're done; red and customs will want to see the goods, so keep them findable. Then check in, and home by 06:55 Saturday.</p>
+          <ul class="costs"><li><span>Narita Express</span><span data-yen="3250"></span></li><li><span>Refund on ¥100,000 of shopping</span><span class="y">about ¥9,000 back</span></li></ul>
+        </div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section id="cars">
+  <div class="wrap wrap--pad">
+    <p class="eyebrow"><span class="jp">車</span> Cars</p>
+    <h2>The car half</h2>
+    <div class="two">
+      <div class="panel">
+        <h3>The one thing still outstanding <span class="jp">国際免許</span></h3>
+        <p>You've both held licences over three years, so the self-drive convoy is on. What's missing is the <strong>International Driving Permit</strong>.</p>
+        <ul>
+          <li>It must be the <strong>1949 Geneva Convention</strong> permit, on paper, from the RAC in WA. Japan does not accept the 1968 version, digital copies or photos.</li>
+          <li>You can only get it in Australia before you leave. There is no way to fix this from Tokyo.</li>
+          <li>Carry the IDP, your actual licence and your passport on the night. Missing any one of them and you don't drive, with no refund.</li>
+          <li>They're quick and cheap, but don't leave it to the last fortnight.</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3>Car stops on this plan <span class="jp">見どころ</span></h3>
+        <ul>
+          <li><strong>Daikoku PA</strong>, Fri 5 Feb: self-drive convoy. The reason the dates work.</li>
+          <li><strong>Ebisu Circuit</strong>, Nihonmatsu, Tue 9 Feb: AE86 Ride &amp; Drive. Closed on major Japanese holidays, which is why it isn't the 11th.</li>
+          <li><strong>Up Garage Machida</strong>, the chief store, 35 min on the Odakyu from Shinjuku. Tax-free available.</li>
+          <li><strong>A PIT Autobacs</strong>, Shinonome: parts and merch, pairs with Odaiba.</li>
+          <li><strong>Nissan Global HQ Gallery</strong>, Yokohama: free, and better than it sounds.</li>
+          <li><strong>Nissan Crossing</strong>, Ginza: free, ten minutes, do it on Daikoku morning.</li>
+          <li><strong>Tatsumi PA</strong>: late-night car spotting, reachable by taxi.</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3>If the self-drive falls through <span class="jp">代替</span></h3>
+        <p>The passenger tour with a pro driver runs the same route in the same cars for <span data-yen="35000"></span> a car, 10% more Friday to Sunday. No IDP, no paperwork risk on the night, and it puts about <span data-yen="29000"></span> back in the shopping money.</p>
+        <p style="margin-bottom:0">Book the self-drive, but know the fallback exists, and that it is a decision you can still make late.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="city">
+  <div class="wrap wrap--pad">
+    <p class="eyebrow"><span class="jp">東京</span> The rest of it</p>
+    <h2>Anime, clothes, bars, massage</h2>
+    <div class="two">
+      <div class="panel">
+        <h3>Anime and collectibles <span class="jp">アニメ</span></h3>
+        <ul>
+          <li><strong>Nakano Broadway</strong>: Mandarake's flagship across dozens of units. Older figures, cels, and things you won't see anywhere else.</li>
+          <li><strong>Akihabara</strong>: Mandarake Complex, Super Potato for retro consoles, Animate, Yodobashi Akiba, GiGO arcades.</li>
+          <li><strong>Ikebukuro</strong>: the Animate flagship, Sunshine City, Pokémon Centre Mega Tokyo, Otome Road.</li>
+          <li><strong>Gundam Base Tokyo</strong>, Odaiba: kits including exclusives, with the Unicorn outside.</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3>Streetwear and vintage <span class="jp">古着</span></h3>
+        <ul>
+          <li><strong>Ura-Harajuku and Cat Street</strong>: the dense bit, small labels, start here.</li>
+          <li><strong>Shimokitazawa</strong>: best secondhand in the city, and seven minutes from Shinjuku.</li>
+          <li><strong>Koenji</strong>: cheaper, scruffier, better bargains.</li>
+          <li><strong>Nakameguro and Daikanyama</strong>: quieter and more expensive, good for one nice thing.</li>
+          <li><strong>Ameyoko</strong>, Ueno: market stalls under the tracks on Day 15. Cheap, loud, and the one place haggling works.</li>
+          <li>Hit the ¥5,000 minimum in one store where you can, so the tax refund is worth claiming.</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3>The two nights out <span class="jp">夜遊び</span></h3>
+        <ul>
+          <li><strong>Sat 6 Feb</strong>: guided izakaya crawl. Someone ordering for you across five or six places is the fastest way to work out what you like.</li>
+          <li><strong>Sat 13 Feb</strong>: Golden Gai and Kabukicho on your own. Shoebox bars with six seats and a cover charge, which is the whole point.</li>
+          <li><strong>Omoide Yokocho</strong> is the easy default any night, and it's a walk from the hotel.</li>
+          <li>Nomihodai sets run <span data-yen="1500-2500" data-approx></span> for a fixed time if you want a cheap night.</li>
+          <li>Everything above is within walking distance of a Shinjuku base. That was most of the reason for picking it.</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3>Massage and soaking <span class="jp">整体</span></h3>
+        <ul>
+          <li>Four sessions each, spread out: after the flight, after Ebisu, after the first big night, and near the end.</li>
+          <li>Neighbourhood shiatsu chains are <span data-yen="3000-6000" data-approx></span> an hour and far cheaper than anything the hotel offers.</li>
+          <li><strong>Thermae-yu</strong> in Shinjuku is a real onsen with actual hot spring water, walkable from the base.</li>
+          <li>Public sento are about <span data-yen="550" data-approx></span>. Tattoos can be an issue at some, Thermae-yu included, so check before you go.</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3>February weather <span class="jp">2月の天気</span></h3>
+        <ul>
+          <li>Tokyo runs about 10°C by day and near freezing at night. Dry and often bright, one of the clearest months for seeing Fuji.</li>
+          <li>Ebisu and the Fuji day trips will be considerably colder. Thermals, gloves, a hat.</li>
+          <li>Snow in Tokyo is rare but not impossible, and the city handles it badly when it comes.</li>
+          <li>No snow and no winter sports anywhere in this plan. Fuji is scenery, not an activity.</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3>Why one hotel <span class="jp">拠点</span></h3>
+        <ul>
+          <li>Eighteen nights, zero repacking, zero luggage forwarding, zero check-in admin.</li>
+          <li>Shinjuku has the Narita Express direct, plus the JR, Odakyu and Metro lines every day trip on this plan uses.</li>
+          <li>Both big nights out end within walking distance of your bed.</li>
+          <li>Purchases pile up in one room, which makes the shipping day on the 17th far simpler.</li>
+          <li>Book a twin with free cancellation and you can still change your mind.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="ship">
+  <div class="wrap wrap--pad">
+    <p class="eyebrow"><span class="jp">発送</span> Shipping home</p>
+    <h2>Getting it all back</h2>
+    <p>With one 23 kg bag each on an Economy Light fare, shipping is the plan rather than a backup. Prices below are from September 2026 and step every 500 g, so a 10.2 kg box bills as 10.5 kg.</p>
+    <div class="tablebox">
+      <table>
+        <thead><tr><th>Service</th><th class="num">Per 10 kg</th><th>Time</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Seamail</strong> (Japan Post)<span class="sm">Cheapest by a mile. Up to 30 kg, longest side 1.05 m.</span></td><td class="num" data-label="Per 10 kg"><span class="y">about A$85</span></td><td data-label="Time">30–90 days</td></tr>
+          <tr><td><strong>DHL Express</strong><span class="sm">Cheaper than EMS above about 3 kg, and faster. Up to 70 kg.</span></td><td class="num" data-label="Per 10 kg"><span class="y">about A$165</span></td><td data-label="Time">3–7 days</td></tr>
+          <tr><td><strong>EMS</strong> (Japan Post)<span class="sm">Up to 30 kg. Easy to arrange anywhere, but the worst value of the three.</span></td><td class="num" data-label="Per 10 kg"><span class="y">about A$250</span></td><td data-label="Time">7–9 days</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Converted from USD at roughly 1.50, so treat them as indicative. Volumetric weight is length × width × height in cm ÷ 5,000. If that beats the scale weight, you pay for the volume, which matters for bulky, light things like figures in boxes.</p>
+    <div class="two" style="margin-top:20px">
+      <div class="panel">
+        <h3>Australian customs <span class="jp">通関</span></h3>
+        <ul>
+          <li>Parcels valued at <strong>A$1,000 or less</strong> clear with no duty and no GST at the border. That's per consignment, on the whole declared value.</li>
+          <li>Over A$1,000 you need an import declaration, and duty (0–5% on most things) plus 10% GST plus processing fees apply.</li>
+          <li><strong>So split it.</strong> Two or three boxes under A$1,000 each beats one over the line, and the extra freight is less than the tax.</li>
+          <li>Declare honestly. Under-declaring a parcel to duck the threshold is not worth it.</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3>What not to put in <span class="jp">検疫</span></h3>
+        <ul>
+          <li>Biosecurity blocks meat, dairy, egg, seeds, live plants, untreated wood and anything with soil on it.</li>
+          <li>Sealed commercial snacks and tea are generally fine, so the KitKats will make it.</li>
+          <li>Wooden souvenirs and anything bonsai-adjacent are a problem. Leave them.</li>
+          <li><strong>No lithium batteries or power banks</strong> by air freight, and not in your checked bag either.</li>
+          <li>Photograph the contents before you seal a box. It makes an insurance claim possible.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="prep">
+  <div class="wrap wrap--pad">
+    <p class="eyebrow"><span class="jp">準備</span> Before we go</p>
+    <h2>Checklist</h2>
+    <p class="muted">Roughly in the order things need doing. Ticks are saved on your own device only, so they don't travel between phones.</p>
+    <ol class="check" id="checklist">
+      <li><label for="c1"><input type="checkbox" id="c1" checked><span>Flights booked: Perth to Narita return, 1 to 19 Feb 2027. Check the second ticket is on the identical itinerary. <span class="when">Done 22 Sep 2026</span></span></label></li>
+      <li><label for="c2"><input type="checkbox" id="c2"><span>Get the <strong>International Driving Permits</strong> from the RAC, 1949 Geneva Convention, on paper. Everything on Day 5 depends on this and it can't be sorted in Japan. <span class="when">Do this first</span></span></label></li>
+      <li><label for="c3"><input type="checkbox" id="c3"><span>Buy travel insurance now the flights are ticketed, so cancellation cover starts.</span></label></li>
+      <li><label for="c4"><input type="checkbox" id="c4"><span>Book the Shinjuku twin for all 18 nights, with free cancellation. One property, one booking, walkable to Golden Gai and Omoide Yokocho. <span class="when">Prices climb from about November</span></span></label></li>
+      <li><label for="c5"><input type="checkbox" id="c5"><span>Book the OnlyJDM self-drive convoy for <strong>Friday 5 Feb</strong>, two drivers. Confirm the three-year rule against both licence issue dates when you book.</span></label></li>
+      <li><label for="c6"><input type="checkbox" id="c6"><span>Book the Ebisu <strong>AE86 Ride &amp; Drive</strong> for <strong>Tuesday 9 Feb</strong>, not the 11th, which is a public holiday. It's a newer product than the plain hot laps, so confirm it's running on your date and that the IDP covers you to drive it.</span></label></li>
+      <li><label for="c7"><input type="checkbox" id="c7"><span>Book the izakaya crawl for Sat 6 Feb and Fuji-Q for Fri 12 Feb. Nothing else needs booking ahead, and Day 15 is deliberately open.</span></label></li>
+      <li><label for="c9"><input type="checkbox" id="c9"><span>Get a credit card with no foreign transaction fees, since the tour deposit needs credit rather than debit, plus some yen cash for the small bars.</span></label></li>
+      <li><label for="c10"><input type="checkbox" id="c10"><span>Check any medication against Japan's rules. Pseudoephedrine cold tablets and some ADHD medication are banned outright, not just restricted.</span></label></li>
+      <li><label for="c11"><input type="checkbox" id="c11"><span>One week out: Visit Japan Web for the immigration, customs and tax-refund QR codes. eSIMs. Suica in Apple Wallet.</span></label></li>
+      <li><label for="c12"><input type="checkbox" id="c12"><span>Pack warm layers, a Type A plug adapter, a coin pouch and slip-on shoes. <strong>One bag each</strong>, since the fare only allows one and the shopping is being shipped rather than carried.</span></label></li>
+      <li><label for="c13"><input type="checkbox" id="c13"><span>In Japan: keep every tax-free receipt in one envelope, and keep anything you'll claim on <em>out</em> of the shipping boxes.</span></label></li>
+    </ol>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap wrap--pad">
+    <p>Flight details and prices checked September 2026. Anything with a <strong>~</strong> is an estimate, so check before booking.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var KEY_RATE='jp27-rate', KEY_CHECK='jp27-check';
+  var rateInput=document.getElementById('rate');
+  var rate=110;
+  try{var s=parseFloat(localStorage.getItem(KEY_RATE)); if(s>=50&&s<=250) rate=s;}catch(e){}
+  rateInput.value=rate;
+
+  function fY(n){return '¥'+Math.round(n).toLocaleString('en-AU');}
+  function fA(n){return 'A$'+Math.round(n).toLocaleString('en-AU');}
+  function toA(y){return y/rate;}
+  function round10(n){return Math.round(n/10)*10;}
+
+  function renderInline(){
+    document.querySelectorAll('span[data-yen]').forEach(function(el){
+      var p=el.getAttribute('data-yen').split('-').map(Number);
+      var ap=el.hasAttribute('data-approx')?'~':'';
+      var keep=el.querySelector('.opt');
+      var y,a;
+      if(p.length>1){
+        y=ap+fY(p[0])+'–'+Math.round(p[1]).toLocaleString('en-AU');
+        a='≈ '+fA(toA(p[0]))+'–'+Math.round(toA(p[1])).toLocaleString('en-AU');
+      }else{
+        y=ap+fY(p[0]);
+        a='≈ '+fA(toA(p[0]));
+      }
+      el.innerHTML='<span class="y">'+y+'</span> <span class="a">'+a+'</span>';
+      if(keep) el.appendChild(keep);
+    });
+  }
+
+  function cell(yen,aud,div){
+    if(aud!=null){return '<span class="y">'+fA(aud/div)+'</span>';}
+    return '<span class="y">'+fY(yen/div)+'</span><span class="a">≈ '+fA(toA(yen)/div)+'</span>';
+  }
+  function totalCell(aud,div){
+    return '<span class="y">'+fA(round10(aud/div))+'</span>';
+  }
+
+  function renderBudget(){
+    var sums={base:0,extra:0};
+    document.querySelectorAll('#budgetBody tr[data-kind]').forEach(function(tr){
+      var yen=tr.getAttribute('data-yen'), aud=tr.getAttribute('data-aud');
+      var tds=tr.querySelectorAll('td.num');
+      var yn=yen?Number(yen):null, an=aud?Number(aud):null;
+      tds[0].innerHTML=cell(yn,an,1);
+      tds[1].innerHTML=cell(yn,an,2);
+      sums[tr.getAttribute('data-kind')]+= an!=null?an:toA(yn);
+    });
+    var base=sums.base, real=base+sums.extra;
+    document.getElementById('tBase').innerHTML=totalCell(base,1);
+    document.getElementById('tBaseEach').innerHTML=totalCell(base,2);
+    document.getElementById('tReal').innerHTML=totalCell(real,1);
+    document.getElementById('tRealEach').innerHTML=totalCell(real,2);
+    document.getElementById('tLeft').innerHTML=totalCell(14000-real,1);
+    document.getElementById('tLeftEach').innerHTML=totalCell(14000-real,2);
+    document.getElementById('heroTotal').textContent=fA(round10(real/2));
+  }
+
+  function renderAll(){renderInline();renderBudget();}
+
+  rateInput.addEventListener('input',function(){
+    var v=parseFloat(rateInput.value);
+    if(!(v>=50&&v<=250)) return;
+    rate=v;
+    try{localStorage.setItem(KEY_RATE,String(v));}catch(e){}
+    renderAll();
+  });
+
+  var done={};
+  try{done=JSON.parse(localStorage.getItem(KEY_CHECK)||'{}')||{};}catch(e){done={};}
+  document.querySelectorAll('#checklist input').forEach(function(cb){
+    var li=cb.closest('li');
+    if(done[cb.id]) cb.checked=true;
+    else if(done[cb.id]===false) cb.checked=false;
+    if(cb.checked) li.classList.add('done');
+    cb.addEventListener('change',function(){
+      done[cb.id]=cb.checked;
+      li.classList.toggle('done',cb.checked);
+      try{localStorage.setItem(KEY_CHECK,JSON.stringify(done));}catch(e){}
+    });
+  });
+
+  renderAll();
+})();
+</script>
+</body>
+</html>
