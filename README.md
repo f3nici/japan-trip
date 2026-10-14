@@ -9,8 +9,9 @@ A single-page trip plan: flights, budget, day-by-day itinerary and a pre-departu
 Perth to Tokyo Narita and back on Cathay Pacific, **Mon 1 Feb to Fri 19 Feb 2027**, 18 nights,
 Narita both ways.
 
-Tokyo-based: one twin room in Shinjuku for the whole stay, with days out to Daikoku, Ebisu
-Circuit, Yokohama and Fuji-Q Highland.
+Tokyo-based: APA Hotel & Resort Nishishinjuku Gochome Ekimae Tower for the whole stay
+(booked as two stays, 1–13 and 13–19 Feb), on the Oedo line two stops from Shinjuku. Days out to
+Daikoku, Ebisu Circuit, Yokohama and Fuji-Q Highland.
 
 ## Do not publish personal details
 

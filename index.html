@@ -224,6 +224,9 @@ ol.days{list-style:none;margin:0;padding:0}
 .day h3 .tag.car{background:var(--shu);color:#fff}
 .day h3 .tag.big{background:var(--kin);color:#2A2205}
 .day p{margin:0 0 8px;font-size:16px}
+.day p.route{font-size:14.5px;line-height:1.55;color:var(--muted);border-left:3px solid var(--ai);padding:1px 0 1px 10px;margin:0 0 9px}
+.day p.route b{font-family:var(--round);font-weight:700;color:var(--ai);margin-right:5px;letter-spacing:.02em}
+.fact .ja{font-family:var(--round);font-weight:700;font-size:17px;line-height:1.55}
 ul.costs{list-style:none;margin:0;padding:0;font-size:15px}
 ul.costs li{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:3px 0;border-top:1px solid var(--line)}
 ul.costs li:first-child{border-top:none}
@@ -301,6 +304,7 @@ footer .wrap{padding-bottom:env(safe-area-inset-bottom)}
   <div class="inner">
     <nav aria-label="Sections">
       <a href="#flights">Flights</a>
+      <a href="#hotel">Hotel</a>
       <a href="#entry">Getting in</a>
       <a href="#budget">Budget</a>
       <a href="#days">Day by day</a>
@@ -315,9 +319,9 @@ footer .wrap{padding-bottom:env(safe-area-inset-bottom)}
 
 <header class="hero">
   <div class="wrap wrap--pad">
-    <p class="kicker">Booked · Cathay Pacific</p>
+    <p class="kicker">Booked · Cathay Pacific · APA Nishi-Shinjuku</p>
     <h1><span class="jp">にほん・2027年2月</span>Japan,<br>February 2027</h1>
-    <p class="sub">Eighteen nights, two of us, <strong>one twin room in Shinjuku the whole way</strong>. Cars, anime, streetwear and a couple of big nights out. Budget is A$7,000 each and this plan comes to about <strong id="heroTotal">A$5,890</strong> each, leaving the rest for shopping.</p>
+    <p class="sub">Eighteen nights, two of us, <strong>one hotel in Nishi-Shinjuku the whole way</strong>. Cars, anime, streetwear and a couple of big nights out. Budget is A$7,000 each and this plan comes to about <strong id="heroTotal">A$5,890</strong> each, leaving the rest for shopping.</p>
     <ul class="dates">
       <li><b>Mon 1 Feb</b> <i>→</i> <b>Fri 19 Feb 2027</b></li>
       <li>18 nights</li>
@@ -327,7 +331,7 @@ footer .wrap{padding-bottom:env(safe-area-inset-bottom)}
     <div class="plates">
       <h4>Base</h4>
       <div class="plate-row">
-        <div class="plate base"><span class="jp">新宿</span><span class="ro">Shinjuku</span><span class="meta">18 nights · never repack</span></div>
+        <div class="plate base"><span class="jp">西新宿五丁目</span><span class="ro">Nishi-Shinjuku 5-chome</span><span class="meta">18 nights · APA Ekimae Tower</span></div>
       </div>
       <h4 style="margin-top:18px">Days out</h4>
       <div class="plate-row">
@@ -335,7 +339,7 @@ footer .wrap{padding-bottom:env(safe-area-inset-bottom)}
         <div class="plate"><span class="jp">二本松</span><span class="ro">Nihonmatsu</span><span class="meta">Tue 9 Feb · Ebisu drift</span></div>
         <div class="plate"><span class="jp">横浜</span><span class="ro">Yokohama</span><span class="meta">Sun 7 Feb</span></div>
         <div class="plate"><span class="jp">富士急</span><span class="ro">Fuji-Q</span><span class="meta">Fri 12 Feb</span></div>
-        <div class="plate out"><span class="jp">町田</span><span class="ro">Machida</span><span class="meta">Up Garage</span></div>
+        <div class="plate out"><span class="jp">南町田</span><span class="ro">Minami-machida</span><span class="meta">Up Garage</span></div>
       </div>
     </div>
 
@@ -386,8 +390,52 @@ footer .wrap{padding-bottom:env(safe-area-inset-bottom)}
 
     <div class="facts" style="margin-top:20px">
       <div class="fact ok"><h3>Day 1 lands on a Monday</h3><p>So Day 5 falls on Friday 5 Feb, and Friday night is when Daikoku is worth going to.</p></div>
-      <div class="fact"><h3>Getting to Shinjuku</h3><p>The Narita Express runs direct, <span data-yen="3250"></span> each way, about 80 minutes. The ¥5,000 round-trip tourist ticket is <strong>only valid 14 days</strong>, so on a 19-day trip it won't cover the return, so buy two singles.</p></div>
-      <div class="fact"><h3>Cheaper options in</h3><p>Keisei Skyliner plus the Yamanote is <span data-yen="2730"></span>. The Odakyu/Access bus is about <span data-yen="1300" data-approx></span> but slower. The N'EX is worth it on arrival day.</p></div>
+      <div class="fact"><h3>Getting to the hotel</h3><p>The Narita Express runs direct to Shinjuku, <span data-yen="3250"></span> each way, about 80 minutes, then it's two stops on the Oedo line. The ¥5,000 round-trip tourist ticket is <strong>only valid 14 days</strong>, so on a 19-day trip it won't cover the return. Buy two singles.</p></div>
+      <div class="fact"><h3>Cheaper options in</h3><p>Keisei Skyliner, the Yamanote to Shinjuku, then the Oedo is about <span data-yen="2900" data-approx></span>. The Odakyu/Access bus is about <span data-yen="1300" data-approx></span> but slower. The N'EX is worth it on arrival day.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="hotel">
+  <div class="wrap wrap--pad">
+    <p class="eyebrow"><span class="jp">宿泊</span> Hotel</p>
+    <h2>Where we're staying</h2>
+    <p class="muted">Booked for all eighteen nights, as two reservations that meet on Saturday 13 Feb.</p>
+
+    <div class="ticket">
+      <div class="thead">
+        <b>APA HOTEL &amp; RESORT NISHISHINJUKU GOCHOME EKIMAE TOWER</b>
+        <span>3-14-1 Honmachi, Shibuya-ku, Tokyo</span>
+      </div>
+      <div class="seg">
+        <span class="fno">STAY 1</span>
+        <span class="path">Mon 1 <span class="arw">→</span> Sat 13 Feb</span>
+        <span class="when"><b>12 nights</b><span data-yen="251370"></span></span>
+      </div>
+      <div class="seg">
+        <span class="fno">STAY 2</span>
+        <span class="path">Sat 13 <span class="arw">→</span> Fri 19 Feb</span>
+        <span class="when"><b>6 nights</b><span data-yen="286650"></span></span>
+      </div>
+      <div class="tfoot">
+        <span>Check-in from 15:00 · check-out by <b>10:00</b></span>
+        <span><b>¥538,020</b> for the room</span>
+      </div>
+    </div>
+
+    <div class="facts" style="margin-top:20px">
+      <div class="fact ok"><h3>The station is the front door</h3><p>Nishi-shinjuku-gochome on the Toei Oedo line, exit A2, one minute away. Shinjuku is two stops and about four minutes, with no change.</p></div>
+      <div class="fact"><h3>How the Oedo works from here</h3><p>Trains from the hotel run straight through Shinjuku, Yoyogi, Roppongi and Daimon, so that side of the city is one ride. For Shinjuku-nishiguchi, Higashi-shinjuku, Ueno-okachimachi and Kuramae, change at <strong>Tochomae</strong>, the very next stop, to go the short way round. Coming back from that side, same change.</p></div>
+      <div class="fact flag"><h3>Golden Gai is a taxi, not a walk</h3><p>It's about 2.2 km: 30 minutes on foot, or ten minutes and about <span data-yen="1500" data-approx></span> by taxi at night. Omoide Yokocho is a 20-minute walk. The last Oedo trains run shortly after midnight.</p></div>
+      <div class="fact"><h3>A free hot bath downstairs</h3><p>Big shared baths with an open-air tub, free for guests, 15:00 to 02:00 and 06:00 to 10:00. There's a small shop in the lobby and an Irish pub on the ground floor.</p></div>
+      <div class="fact"><h3>Check-out is 10:00</h3><p>Not 11:00. It matters on Sat 13 Feb and on the last morning. Leave the bags at the front desk after checking out.</p></div>
+      <div class="fact"><h3>The rooms are small</h3><p>A standard twin here is about 13 m², which is normal for APA (the deluxe twins are 30 m²). If the shopping pile gets in the way, send a first box early rather than everything on the 17th.</p></div>
+      <div class="fact"><h3>Show this to taxi drivers</h3><p class="ja" lang="ja">アパホテル＆リゾート〈西新宿五丁目駅前タワー〉<br>東京都渋谷区本町3-14-1</p></div>
+    </div>
+
+    <div class="callout">
+      <h3>Two bookings meet on Saturday 13 Feb</h3>
+      <p>Stay 1 checks out at 10:00 that morning and stay 2 checks in at 15:00. At check-in on the 1st, show both confirmations and ask for them to be joined so you keep the same room: <span lang="ja">「2つの予約を、同じ部屋のまま連泊にしていただけますか？」</span> If they can't (a different room type, say), pack on Friday night after Fuji-Q, leave everything at the front desk on Saturday morning, and collect it after 15:00.</p>
     </div>
   </div>
 </section>
@@ -424,15 +472,15 @@ footer .wrap{padding-bottom:env(safe-area-inset-bottom)}
           <tr class="group"><td colspan="3">To pay in AUD before we go</td></tr>
           <tr data-kind="base" data-aud="360"><td>Travel insurance and eSIMs<span class="opt">estimate</span></td><td class="num" data-label="For both of us"></td><td class="num" data-label="Each"></td></tr>
           <tr class="group"><td colspan="3">Stays, travel, food</td></tr>
-          <tr data-kind="base" data-yen="306000"><td>18 nights, one twin room in Shinjuku<span class="sm">About ¥17,000 a night for somewhere central enough to walk home from Golden Gai.</span></td><td class="num" data-label="For both of us"></td><td class="num" data-label="Each"></td></tr>
-          <tr data-kind="base" data-yen="108000"><td>All transport<span class="sm">Narita Express both ways, daily metro, the Ebisu run, the Fuji-Q coach and late-night taxis. No luggage forwarding needed now.</span></td><td class="num" data-label="For both of us"></td><td class="num" data-label="Each"></td></tr>
+          <tr data-kind="base" data-yen="538020"><td>18 nights, APA Hotel &amp; Resort Nishishinjuku Gochome Ekimae Tower<span class="sm">Booked as two stays: 1–13 Feb for ¥251,370 and 13–19 Feb for ¥286,650. Confirmed prices, not estimates.</span></td><td class="num" data-label="For both of us"></td><td class="num" data-label="Each"></td></tr>
+          <tr data-kind="base" data-yen="108000"><td>All transport<span class="sm">Narita Express both ways, the Oedo line from the hotel most days, the Ebisu run, the Fuji-Q coach and taxis home after the big nights. No luggage forwarding needed.</span></td><td class="num" data-label="For both of us"></td><td class="num" data-label="Each"></td></tr>
           <tr data-kind="base" data-yen="180000"><td>Food, about ¥5,000 each a day<span class="sm">Konbini breakfasts, cheap lunches, a few splurge dinners.</span></td><td class="num" data-label="For both of us"></td><td class="num" data-label="Each"></td></tr>
           <tr class="total"><td>Base trip</td><td class="num" data-label="For both of us" id="tBase"></td><td class="num" data-label="Each" id="tBaseEach"></td></tr>
           <tr class="group"><td colspan="3">The fun stuff</td></tr>
           <tr data-kind="extra" data-yen="64000"><td>Daikoku self-drive convoy, one car, both driving<span class="sm">¥55,000 plus ¥3,300 for the second driver, plus tax. Fuel and tolls included.</span></td><td class="num" data-label="For both of us"></td><td class="num" data-label="Each"></td></tr>
           <tr data-kind="extra" data-yen="136400"><td>Ebisu drift day, AE86 Ride &amp; Drive for both<span class="sm">¥66,000 each, covering the hot laps plus two ten-minute sessions on the Kuru Kuru drift pad, and the ¥2,200 gate fee. Transport is in the line above.</span></td><td class="num" data-label="For both of us"></td><td class="num" data-label="Each"></td></tr>
           <tr data-kind="extra" data-yen="15000"><td>Fuji-Q Highland day passes<span class="opt">estimate</span></td><td class="num" data-label="For both of us"></td><td class="num" data-label="Each"></td></tr>
-          <tr data-kind="extra" data-yen="25000"><td>Other entries<span class="sm">Shibuya Sky, Cup Noodles Museum, teamLab, Gundam Base, Ueno museums, sento soaks, arcades.</span></td><td class="num" data-label="For both of us"></td><td class="num" data-label="Each"></td></tr>
+          <tr data-kind="extra" data-yen="25000"><td>Other entries<span class="sm">Shibuya Sky, Cup Noodles Museum, teamLab, Gundam Base, Ueno museums, Thermae-yu, arcades.</span></td><td class="num" data-label="For both of us"></td><td class="num" data-label="Each"></td></tr>
           <tr data-kind="extra" data-yen="36000"><td>Shiatsu, four sessions each<span class="sm">Neighbourhood chains, about ¥4,500 an hour.</span></td><td class="num" data-label="For both of us"></td><td class="num" data-label="Each"></td></tr>
           <tr data-kind="extra" data-yen="60000"><td>Two big nights out, plus casual drinks<span class="sm">A guided izakaya crawl and one Golden Gai / Kabukicho night, then normal drinking.</span></td><td class="num" data-label="For both of us"></td><td class="num" data-label="Each"></td></tr>
           <tr data-kind="extra" data-yen="35000"><td>Shipping purchases home<span class="opt">estimate</span><span class="sm">Two 10 kg boxes by courier. See <a href="#ship">Shipping home</a> for the options.</span></td><td class="num" data-label="For both of us"></td><td class="num" data-label="Each"></td></tr>
@@ -443,6 +491,10 @@ footer .wrap{padding-bottom:env(safe-area-inset-bottom)}
         </tbody>
       </table>
     </div>
+    <div class="callout">
+      <h3>The hotel took most of the shopping money</h3>
+      <p>The plan first allowed ¥306,000 for the room. The two bookings came to ¥538,020, which is <span data-yen="232020"></span> more and nearly everything that was left for shopping. The fallbacks below and under <a href="#cars">Cars</a> are where to win some back.</p>
+    </div>
     <p class="note">The Ebisu line buys the <strong>AE86 Ride &amp; Drive</strong> at <span data-yen="66000"></span> each rather than ¥25,000 for hot laps alone. If it turns out not to be running on the day, dropping back to hot laps returns about <strong>A$300 each</strong> to the shopping money.</p>
   </div>
 </section>
@@ -451,45 +503,52 @@ footer .wrap{padding-bottom:env(safe-area-inset-bottom)}
   <div class="wrap wrap--pad">
     <p class="eyebrow"><span class="jp">日程</span> Day by day</p>
     <h2>Nineteen days</h2>
-    <p class="muted">Red day numbers are the ones with something booked that can't move. Blue ones are deliberately soft: recovery, or a public holiday when everything's packed. Train and entry prices are each.</p>
+    <p class="muted">Red day numbers are the ones with something booked that can't move. Blue ones are deliberately soft: recovery, or a public holiday when everything's packed. Every route starts and ends at the hotel. Train and entry prices are each.</p>
 
     <div class="leg">
       <div class="leghead"><b>Week one</b><span>Mon 1 – Sun 7 Feb</span></div>
       <ol class="days">
         <li class="day pin"><div class="dn">Day 1<small>Mon 1 Feb</small></div><div>
           <h3>Land, get to Shinjuku, eat <span class="tag">arrive</span></h3>
-          <p>Narita at 14:05. Visit Japan Web QR codes through immigration and customs, cash out of an ATM, Narita Express to Shinjuku and check in. You'll have been travelling about twenty hours, so keep it to a short walk and yakitori in Omoide Yokocho, then sleep.</p>
-          <ul class="costs"><li><span>Narita Express to Shinjuku</span><span data-yen="3250"></span></li><li><span>Yakitori and a couple of beers</span><span data-yen="2500" data-approx></span></li></ul>
+          <p>Narita at 14:05. Visit Japan Web QR codes through immigration and customs, cash out of an ATM, Narita Express to Shinjuku, two stops to the hotel and check in. You'll have been travelling about twenty hours, so keep it to yakitori in Omoide Yokocho, then sleep.</p>
+          <p class="route"><b>Route</b> At Shinjuku, follow the signs for the Toei Oedo line, which is under the south side of the station. Any Hikarigaoka-bound train, two stops to Nishi-shinjuku-gochome, exit A2. If the bags are too much, a taxi from the south exit is about ¥1,200. Omoide Yokocho is a 20-minute walk, or two stops back.</p>
+          <ul class="costs"><li><span>Narita Express to Shinjuku</span><span data-yen="3250"></span></li><li><span>Oedo line to the hotel</span><span data-yen="180" data-approx></span></li><li><span>Yakitori and a couple of beers</span><span data-yen="2500" data-approx></span></li></ul>
         </div></li>
         <li class="day"><div class="dn">Day 2<small>Tue 2 Feb</small></div><div>
           <h3>Harajuku, Shibuya, first massage <span class="tag">shopping</span></h3>
-          <p>Gentle jet-lag day on foot. Ura-Harajuku backstreets and Cat Street for streetwear, Honda Welcome Plaza in Aoyama on the way through (free), then Shibuya Sky for sunset and the crossing after dark. Shiatsu in the evening to get the flight out of your back.</p>
+          <p>Gentle jet-lag day on foot. Ura-Harajuku backstreets and Cat Street for streetwear, walking down into Shibuya, then Shibuya Sky for sunset and the crossing after dark. Shiatsu in the evening to get the flight out of your back.</p>
+          <p class="route"><b>Route</b> Oedo three stops to Yoyogi, no change, then the JR Yamanote one stop to Harajuku. About 15 minutes. Home from Shibuya: the Yamanote two stops back to Yoyogi and the Oedo, about 20 minutes, or a taxi for about ¥2,000.</p>
           <ul class="costs"><li><span>Shibuya Sky, booked ahead</span><span data-yen="2700" data-approx></span></li><li><span>Shiatsu, 60 min</span><span data-yen="3000-6000" data-approx></span></li></ul>
         </div></li>
         <li class="day"><div class="dn">Day 3<small>Wed 3 Feb</small></div><div>
           <h3>Akihabara <span class="tag">anime</span></h3>
           <p>Yodobashi Akiba for tech, Super Potato for retro games and consoles, Mandarake Complex over eight floors, Animate, and the GiGO arcades when your legs go. Easy izakaya nearby afterwards, and save the real drinking for Saturday.</p>
-          <ul class="costs"><li><span>Arcade games, per play</span><span data-yen="100-200"></span></li><li><span>Izakaya dinner</span><span data-yen="2500-3500" data-approx></span></li></ul>
+          <p class="route"><b>Route</b> Oedo two stops to Shinjuku, then the yellow JR Chuo-Sobu line straight to Akihabara. About 35 minutes all up, and the same way back.</p>
+          <ul class="costs"><li><span>Trains, return</span><span data-yen="800" data-approx></span></li><li><span>Arcade games, per play</span><span data-yen="100-200"></span></li><li><span>Izakaya dinner</span><span data-yen="2500-3500" data-approx></span></li></ul>
         </div></li>
         <li class="day"><div class="dn">Day 4<small>Thu 4 Feb</small></div><div>
           <h3>Nakano and Ikebukuro <span class="tag">anime</span></h3>
-          <p>Nakano Broadway first, for the Mandarake flagship spread over dozens of little units and the best place in the city for older figures and oddities. Then four stops to Ikebukuro for the Animate flagship, Sunshine City and the Pokémon Centre.</p>
-          <ul class="costs"><li><span>Trains for the day</span><span data-yen="500" data-approx></span></li></ul>
+          <p>Nakano Broadway first, for the Mandarake flagship spread over dozens of little units and the best place in the city for older figures and oddities. Then over to Ikebukuro for the Animate flagship, Sunshine City and the Pokémon Centre.</p>
+          <p class="route"><b>Route</b> Oedo two stops the other way to Higashi-nakano, then the yellow JR line one stop to Nakano. The Broadway is five minutes up the covered arcade from the north exit, about 15 minutes all up. To Ikebukuro: the Chuo line one stop to Shinjuku, then four on the Yamanote. Home: the Yamanote back to Shinjuku and the Oedo two stops.</p>
+          <ul class="costs"><li><span>Trains for the day</span><span data-yen="900" data-approx></span></li></ul>
         </div></li>
         <li class="day pin"><div class="dn">Day 5<small>Fri 5 Feb</small></div><div>
           <h3>Daikoku, self-drive <span class="tag car">cars</span></h3>
           <p>The one fixed booking. Nissan Crossing in Ginza in the morning and keep the day light. 5pm pickup from OnlyJDM at Haneda, both of you driving: A PIT Autobacs, then Daikoku PA itself, then a Tokyo Tower photo stop. Fuel and tolls included, car assigned on the day. Friday night is the right night for this.</p>
-          <ul class="costs"><li><span>Self-drive tour, per car, plus tax</span><span data-yen="55000"></span></li><li><span>Second driver</span><span data-yen="3300"></span></li><li><span>Fallback: passenger tour, per car</span><span data-yen="35000"></span></li></ul>
+          <p class="route"><b>Route</b> Oedo straight through to Shiodome, no change, about 25 minutes, then a ten-minute walk up to the Ginza crossing. To the pickup: the Toei Asakusa line from Higashi-ginza runs straight onto the Keikyu line to Haneda, about 30 minutes. Confirm exactly where OnlyJDM want you. Home afterwards: Keikyu back to Daimon, then the Oedo with no change, about an hour. If it runs late, a taxi from Haneda is roughly ¥10,000.</p>
+          <ul class="costs"><li><span>Trains for the day</span><span data-yen="1800" data-approx></span></li><li><span>Self-drive tour, per car, plus tax</span><span data-yen="55000"></span></li><li><span>Second driver</span><span data-yen="3300"></span></li><li><span>Fallback: passenger tour, per car</span><span data-yen="35000"></span></li></ul>
         </div></li>
         <li class="day pin"><div class="dn">Day 6<small>Sat 6 Feb</small></div><div>
           <h3>Asakusa, a soak, then the big one <span class="tag big">night out 1</span></h3>
-          <p>Late start. Senso-ji and Nakamise in Asakusa in the afternoon, then a proper hot soak at Thermae-yu back in Shinjuku. At night, the guided izakaya and bar crawl, with someone else ordering across five or six places, which is the way to learn what you actually like. Golden Gai after if you're still upright, and you can walk home.</p>
-          <ul class="costs"><li><span>Onsen entry</span><span data-yen="1000-3000" data-approx></span></li><li><span>Guided food and bar crawl</span><span data-yen="10000-15000" data-approx></span></li><li><span>Golden Gai cover, per bar</span><span data-yen="500-1500" data-approx></span></li></ul>
+          <p>Late start. Senso-ji and Nakamise in Asakusa in the afternoon, then a proper hot soak at Thermae-yu in Kabukicho. At night, the guided izakaya and bar crawl, with someone else ordering across five or six places, which is the way to learn what you actually like. Golden Gai after if you're still upright, then a taxi home.</p>
+          <p class="route"><b>Route</b> Oedo to Kuramae, changing at Tochomae for the short way round, about 35 minutes. Senso-ji is a 15-minute walk up the river. After: the Oedo from Kuramae straight to Higashi-shinjuku, no change, about 25 minutes, and Thermae-yu is ten minutes' walk into Kabukicho. Home from Golden Gai: taxi, ten minutes, or a 30-minute walk.</p>
+          <ul class="costs"><li><span>Onsen entry</span><span data-yen="1000-3000" data-approx></span></li><li><span>Guided food and bar crawl</span><span data-yen="10000-15000" data-approx></span></li><li><span>Golden Gai cover, per bar</span><span data-yen="500-1500" data-approx></span></li><li><span>Taxi home, per car</span><span data-yen="1500" data-approx></span></li></ul>
         </div></li>
         <li class="day"><div class="dn">Day 7<small>Sun 7 Feb</small></div><div>
           <h3>Yokohama <span class="tag car">cars</span><span class="tag">day trip</span></h3>
-          <p>Thirty minutes out. Nissan Global HQ Gallery is free and right at Yokohama station: GT-Rs, heritage cars, sometimes a ride in one. Then the Cup Noodles Museum to make your own, the Shin-Yokohama Ramen Museum for regional bowls, and Chinatown for dinner. Daikoku is out in the bay here, so you'll recognise the skyline from Friday.</p>
-          <ul class="costs"><li><span>Trains, return</span><span data-yen="1000" data-approx></span></li><li><span>Nissan HQ Gallery</span><span>Free</span></li><li><span>Cup Noodles Museum, plus your own cup</span><span data-yen="1000" data-approx></span></li></ul>
+          <p>Thirty minutes out, and this order saves doubling back. The Shin-Yokohama Ramen Museum first, for regional bowls at lunch. Then Nissan Global HQ Gallery, free and right at Yokohama station: GT-Rs, heritage cars, sometimes a ride in one. Walk the waterfront to the Cup Noodles Museum to make your own, and finish in Chinatown for dinner. Daikoku is out in the bay here, so you'll recognise the skyline from Friday.</p>
+          <p class="route"><b>Route</b> Oedo two stops to Shinjuku, then the JR Shonan-Shinjuku line to Yokohama, about 30 minutes. The JR Yokohama line or the Blue Line gets you to Shin-Yokohama in about 12 minutes, and the same way back. Home from Chinatown: the Minatomirai line to Yokohama, JR to Shinjuku, then the Oedo. About an hour.</p>
+          <ul class="costs"><li><span>Trains for the day</span><span data-yen="2000" data-approx></span></li><li><span>Nissan HQ Gallery</span><span>Free</span></li><li><span>Cup Noodles Museum, plus your own cup</span><span data-yen="1000" data-approx></span></li></ul>
         </div></li>
       </ol>
     </div>
@@ -499,38 +558,45 @@ footer .wrap{padding-bottom:env(safe-area-inset-bottom)}
       <ol class="days">
         <li class="day"><div class="dn">Day 8<small>Mon 8 Feb</small></div><div>
           <h3>Odaiba and the bay <span class="tag car">cars</span><span class="tag">anime</span></h3>
-          <p>Best combined day of the trip. The Unicorn Gundam outside DiverCity and the Gundam Base inside it, then A PIT Autobacs at Shinonome for parts and merch, teamLab Planets in Toyosu if you fancy it, and a taxi to Tatsumi PA after dark, the closest thing to Daikoku you can reach without a hire car.</p>
-          <ul class="costs"><li><span>Gundam statue</span><span>Free</span></li><li><span>teamLab Planets</span><span data-yen="3800" data-approx><span class="opt">optional</span></span></li><li><span>Taxi to Tatsumi and back</span><span data-yen="4000" data-approx></span></li></ul>
+          <p>Best combined day of the trip. The Gundam Base inside DiverCity, then A PIT Autobacs at Shinonome for parts and merch, teamLab Planets in Toyosu if you fancy it, and a taxi to Tatsumi PA after dark, the closest thing to Daikoku you can reach without a hire car. The life-size Unicorn Gundam outside DiverCity was retired on 31 August 2026 and nothing had replaced it at last check, so don't go for the statue.</p>
+          <p class="route"><b>Route</b> Oedo two stops to Shinjuku, then a Saikyo line train that runs through onto the Rinkai line, straight to Tokyo Teleport, about 25 minutes. DiverCity is five minutes' walk. The Rinkai line goes two stops on to Shinonome for A PIT, and teamLab is a short taxi from there. After Tatsumi, have the taxi drop you at Shin-kiba. The Rinkai line runs back through to Shinjuku, then take the Oedo.</p>
+          <ul class="costs"><li><span>Gundam Base</span><span>Free</span></li><li><span>Trains for the day</span><span data-yen="1500" data-approx></span></li><li><span>teamLab Planets</span><span data-yen="3800" data-approx><span class="opt">optional</span></span></li><li><span>Taxi to Tatsumi and back</span><span data-yen="4000" data-approx></span></li></ul>
         </div></li>
         <li class="day pin"><div class="dn">Day 9<small>Tue 9 Feb</small></div><div>
           <h3>Ebisu Circuit <span class="tag car">cars</span><span class="tag big">big day</span></h3>
           <p>Up early. Shinkansen to Koriyama, local train to Nihonmatsu, taxi to the circuit, or take the tour that collects you from the hotel and skips all of that. The <strong>AE86 Ride &amp; Drive</strong>: three hot laps each with a pro on Kita, Nishi or Touge, then two ten-minute sessions of your own on the Kuru Kuru drift pad. Bring the IDP, same paperwork as Daikoku. Fukushima in February is genuinely cold, so wear everything.</p>
+          <p class="route"><b>Route</b> Oedo two stops to Shinjuku, then the Saikyo line to Omiya, 30 to 40 minutes. Pick up the Tohoku Shinkansen there rather than crossing town to Tokyo station. Omiya to Koriyama is about an hour on a Yamabiko, then 25 minutes on the local line to Nihonmatsu and a taxi. Allow a good three hours each way.</p>
           <ul class="costs"><li><span>AE86 Ride &amp; Drive, each</span><span data-yen="66000"></span></li><li><span>Gate fee, includes insurance</span><span data-yen="2200"></span></li><li><span>Return transport</span><span data-yen="20000" data-approx></span></li><li><span>If it's unavailable: hot laps only</span><span data-yen="25000"><span class="opt">fallback</span></span></li></ul>
         </div></li>
         <li class="day rest"><div class="dn">Day 10<small>Wed 10 Feb</small></div><div>
           <h3>The Odakyu line: Up Garage and vintage <span class="tag car">cars</span><span class="tag">shopping</span></h3>
-          <p>One train line, two things you want. <strong>Up Garage Machida</strong> is the chief store, about 35 minutes out from Shinjuku: secondhand exhausts, suspension, wheels, gauges, ECUs and audio, and they do tax-free. Stop at Shimokitazawa on the way back, seven minutes from home, for secondhand clothes and tiny bars. Second massage.</p>
-          <ul class="costs"><li><span>Odakyu line, return</span><span data-yen="900" data-approx></span></li><li><span>Shiatsu, 60 min</span><span data-yen="3000-6000" data-approx></span></li></ul>
+          <p>Mostly one train line, two things you want. <strong>Up Garage Yokohama-Machida</strong> (横浜町田総本店) is the chain's flagship, ten minutes' walk from Minami-machida Grandberry Park station rather than Machida itself: secondhand exhausts, suspension, wheels, gauges, ECUs and audio, and they do tax-free. The Grandberry Park outlet mall is beside the station if you want more clothes. Stop at Shimokitazawa on the way back for secondhand clothes and tiny bars. Second massage.</p>
+          <p class="route"><b>Route</b> Oedo two stops to Shinjuku, then an Odakyu express for Fujisawa or Katase-Enoshima to Chuo-Rinkan, about 45 minutes. From there it's one stop back on the Tokyu Den-en-toshi line. About 75 minutes door to door. Back to Chuo-Rinkan the same way, then the Odakyu to Shimokitazawa (about 40 minutes) and on to Shinjuku (eight).</p>
+          <ul class="costs"><li><span>Trains for the day</span><span data-yen="1500" data-approx></span></li><li><span>Shiatsu, 60 min</span><span data-yen="3000-6000" data-approx></span></li></ul>
         </div></li>
         <li class="day rest"><div class="dn">Day 11<small>Thu 11 Feb</small></div><div>
           <h3>Public holiday, nothing booked <span class="tag">soft day</span></h3>
           <p>National Foundation Day. Ebisu shuts for major holidays and everywhere else fills up, so this is deliberately empty. Wander: Shinjuku Gyoen, Meiji Jingu, the food halls under the department stores, Kabukicho Tower, Koenji for cheap bars in the evening. Whatever you didn't finish earlier in the week.</p>
+          <p class="route"><b>Route</b> Meiji Jingu: Oedo three stops to Yoyogi, then a short walk to the north gate. Shinjuku Gyoen's Sendagaya gate is by Kokuritsu-kyogijo, one Oedo stop further. Koenji: Oedo two stops the other way to Higashi-nakano, then the yellow JR line two stops, and the same way home. Stick to the yellow line, because the orange Chuo rapid skips Koenji on weekends and holidays.</p>
           <ul class="costs"><li><span>Shinjuku Gyoen</span><span data-yen="500"></span></li><li><span>Drinks in Koenji, per drink</span><span data-yen="500-800" data-approx></span></li></ul>
         </div></li>
         <li class="day pin"><div class="dn">Day 12<small>Fri 12 Feb</small></div><div>
           <h3>Fuji-Q Highland <span class="tag">day trip</span></h3>
           <p>Direct highway bus from Shinjuku's Busta terminal, about an hour forty. Fujiyama, Eejanaika and Takabisha with Mt Fuji behind them, and February is the quietest month of the year for queues, which is worth it for that alone. Clear day and you get the mountain; cloudy and you still get the coasters.</p>
+          <p class="route"><b>Route</b> Oedo two stops to Shinjuku. Busta sits on top of the New South exit, under ten minutes' walk from the Oedo exits. Allow 25 minutes from the room to the bus. If the two hotel bookings weren't joined, pack tonight.</p>
           <ul class="costs"><li><span>Highway bus, each way</span><span data-yen="2200"></span></li><li><span>One-day pass</span><span data-yen="7200-7900" data-approx></span></li></ul>
         </div></li>
         <li class="day pin"><div class="dn">Day 13<small>Sat 13 Feb</small></div><div>
           <h3>Restock, then the last big night <span class="tag big">night out 2</span></h3>
-          <p>Daytime is a second pass at whatever you want doubles of: Shibuya, Harajuku, Nakameguro and Daikanyama for the quieter end of streetwear. Then the other big night: Golden Gai's shoebox bars, Kabukicho, and a nomihodai set somewhere if you want it cheap. Saturday is the right night and you're ten minutes from bed.</p>
-          <ul class="costs"><li><span>Nomihodai set, all you can drink</span><span data-yen="1500-2500" data-approx></span></li><li><span>Golden Gai cover, per bar</span><span data-yen="500-1500" data-approx></span></li></ul>
+          <p>The two hotel bookings meet today. Unless they were joined at check-in, check out by 10:00, leave the bags at the front desk, and collect them after 15:00 (see <a href="#hotel">Hotel</a>). Daytime is a second pass at whatever you want doubles of: Shibuya, Harajuku, Nakameguro and Daikanyama for the quieter end of streetwear. Then the other big night: Golden Gai's shoebox bars, Kabukicho, and a nomihodai set somewhere if you want it cheap. Saturday is the right night, and it's a ten-minute taxi home.</p>
+          <p class="route"><b>Route</b> Out as on Day 2, Oedo to Yoyogi and the Yamanote to Harajuku. The Tokyu Toyoko line from Shibuya is one stop to Daikanyama and two to Nakameguro. From Nakameguro, the Hibiya line to Roppongi and the Oedo straight home drops the shopping bags at the hotel before the night. Then two stops to Shinjuku, and a taxi home.</p>
+          <ul class="costs"><li><span>Nomihodai set, all you can drink</span><span data-yen="1500-2500" data-approx></span></li><li><span>Golden Gai cover, per bar</span><span data-yen="500-1500" data-approx></span></li><li><span>Taxi home, per car</span><span data-yen="1500" data-approx></span></li></ul>
         </div></li>
         <li class="day rest"><div class="dn">Day 14<small>Sun 14 Feb</small></div><div>
           <h3>Do very little <span class="tag">soft day</span></h3>
-          <p>Third massage, a long sento soak, a slow lunch. It's Valentine's Day, which in Japan means the department store basements turn into chocolate halls, genuinely worth walking through even if you buy nothing. Early night.</p>
-          <ul class="costs"><li><span>Shiatsu, 60 min</span><span data-yen="3000-6000" data-approx></span></li><li><span>Sento</span><span data-yen="550" data-approx></span></li></ul>
+          <p>Third massage, a long soak in the hotel's own bath, a slow lunch. It's Valentine's Day, which in Japan means the department store basements turn into chocolate halls, genuinely worth walking through even if you buy nothing. Early night.</p>
+          <p class="route"><b>Route</b> Oedo two stops to Shinjuku for the Takashimaya and Isetan basements, and back the same way.</p>
+          <ul class="costs"><li><span>Shiatsu, 60 min</span><span data-yen="3000-6000" data-approx></span></li><li><span>Hotel bath</span><span>Free</span></li></ul>
         </div></li>
       </ol>
     </div>
@@ -541,16 +607,18 @@ footer .wrap{padding-bottom:env(safe-area-inset-bottom)}
         <li class="day"><div class="dn">Day 15<small>Mon 15 Feb</small></div><div>
           <h3>Ueno, Ameyoko and Yanaka <span class="tag">shopping</span></h3>
           <p>The half of Tokyo the rest of the week never touches. Ameyoko market runs under the train tracks: sneakers, bags, street food, and the one place in the city where haggling works. Ueno Park and its museums if the weather holds, then Yanaka for low-rise streets that survived the war, which is about as far from Shinjuku as Tokyo gets.</p>
-          <ul class="costs"><li><span>Trains for the day</span><span data-yen="500" data-approx></span></li><li><span>Tokyo National Museum</span><span data-yen="1000" data-approx><span class="opt">optional</span></span></li></ul>
+          <p class="route"><b>Route</b> Oedo to Ueno-okachimachi, changing at Tochomae for the short way round, about 30 minutes. Ameyoko starts at the exit. Ueno Park is at the top of the market, and Yanaka is a 20-minute walk beyond it. Home from Nippori: the Yamanote round to Shinjuku, then the Oedo, about 45 minutes.</p>
+          <ul class="costs"><li><span>Trains for the day</span><span data-yen="800" data-approx></span></li><li><span>Tokyo National Museum</span><span data-yen="1000" data-approx><span class="opt">optional</span></span></li></ul>
         </div></li>
         <li class="day"><div class="dn">Day 16<small>Tue 16 Feb</small></div><div>
           <h3>Second pass on the anime run <span class="tag">anime</span></h3>
           <p>You'll have a list by now: the figure you didn't buy in Nakano, the game you saw in Akihabara, the size they didn't have in Ikebukuro. This is the day for it, while there's still time to ship. Fourth massage.</p>
-          <ul class="costs"><li><span>Trains for the day</span><span data-yen="600" data-approx></span></li><li><span>Shiatsu, 60 min</span><span data-yen="3000-6000" data-approx></span></li></ul>
+          <p class="route"><b>Route</b> The Day 3 route for Akihabara, the Day 4 routes for Nakano and Ikebukuro.</p>
+          <ul class="costs"><li><span>Trains for the day</span><span data-yen="800" data-approx></span></li><li><span>Shiatsu, 60 min</span><span data-yen="3000-6000" data-approx></span></li></ul>
         </div></li>
         <li class="day pin"><div class="dn">Day 17<small>Wed 17 Feb</small></div><div>
           <h3>Pack the boxes and ship them <span class="tag">logistics</span></h3>
-          <p>Two clear days before the flight, which is the point. Lay everything out, split it into boxes, weigh it, and hand it over. Hotel reception will usually take a courier pickup, or walk it to a Japan Post branch. Keep anything you want the tax refund on <em>out</em> of the boxes. Quiet dinner after.</p>
+          <p>Two clear days before the flight, which is the point. Lay everything out, split it into boxes, weigh it, and hand it over. Ask the front desk about a courier pickup from the hotel, or carry the boxes to a post office. Shinjuku i-Town post office in Nishi-Shinjuku 6-chome is under ten minutes' walk, and any branch takes international parcels. Keep anything you want the tax refund on <em>out</em> of the boxes. Quiet dinner after.</p>
           <ul class="costs"><li><span>Courier, per 10 kg box</span><span data-yen="16500" data-approx></span></li><li><span>Boxes and tape</span><span data-yen="1500" data-approx></span></li></ul>
         </div></li>
         <li class="day"><div class="dn">Day 18<small>Thu 18 Feb</small></div><div>
@@ -560,8 +628,9 @@ footer .wrap{padding-bottom:env(safe-area-inset-bottom)}
         </div></li>
         <li class="day pin"><div class="dn">Day 19<small>Fri 19 Feb</small></div><div>
           <h3>Narita, and the tax refund <span class="tag">fly home</span></h3>
-          <p>Leave Shinjuku around 11:30 for a 16:50 departure. At Narita, do the tax refund <strong>before</strong> you drop the bags, with your passport at the terminal or in Visit Japan Web. Green and you're done; red and customs will want to see the goods, so keep them findable. Then check in, and home by 06:55 Saturday.</p>
-          <ul class="costs"><li><span>Narita Express</span><span data-yen="3250"></span></li><li><span>Refund on ¥100,000 of shopping</span><span class="y">about ¥9,000 back</span></li></ul>
+          <p>Check-out is 10:00, so leave the bags at the front desk for a last coffee, then head off around 11:15 for a 16:50 departure. At Narita, do the tax refund <strong>before</strong> you drop the bags, with your passport at the terminal or in Visit Japan Web. Green and you're done; red and customs will want to see the goods, so keep them findable. Then check in, and home by 06:55 Saturday.</p>
+          <p class="route"><b>Route</b> Oedo two stops to Shinjuku, or a taxi for about ¥1,200 with the bags, then the Narita Express, about 80 minutes to Terminal 2.</p>
+          <ul class="costs"><li><span>Oedo line to Shinjuku</span><span data-yen="180" data-approx></span></li><li><span>Narita Express</span><span data-yen="3250"></span></li><li><span>Refund on ¥100,000 of shopping</span><span class="y">about ¥9,000 back</span></li></ul>
         </div></li>
       </ol>
     </div>
@@ -588,7 +657,7 @@ footer .wrap{padding-bottom:env(safe-area-inset-bottom)}
         <ul>
           <li><strong>Daikoku PA</strong>, Fri 5 Feb: self-drive convoy. The reason the dates work.</li>
           <li><strong>Ebisu Circuit</strong>, Nihonmatsu, Tue 9 Feb: AE86 Ride &amp; Drive. Closed on major Japanese holidays, which is why it isn't the 11th.</li>
-          <li><strong>Up Garage Machida</strong>, the chief store, 35 min on the Odakyu from Shinjuku. Tax-free available.</li>
+          <li><strong>Up Garage Yokohama-Machida</strong>, the flagship, by Minami-machida Grandberry Park station: Odakyu to Chuo-Rinkan and one stop on the Den-en-toshi line, about 75 min from the hotel. Tax-free available.</li>
           <li><strong>A PIT Autobacs</strong>, Shinonome: parts and merch, pairs with Odaiba.</li>
           <li><strong>Nissan Global HQ Gallery</strong>, Yokohama: free, and better than it sounds.</li>
           <li><strong>Nissan Crossing</strong>, Ginza: free, ten minutes, do it on Daikoku morning.</li>
@@ -615,7 +684,7 @@ footer .wrap{padding-bottom:env(safe-area-inset-bottom)}
           <li><strong>Nakano Broadway</strong>: Mandarake's flagship across dozens of units. Older figures, cels, and things you won't see anywhere else.</li>
           <li><strong>Akihabara</strong>: Mandarake Complex, Super Potato for retro consoles, Animate, Yodobashi Akiba, GiGO arcades.</li>
           <li><strong>Ikebukuro</strong>: the Animate flagship, Sunshine City, Pokémon Centre Mega Tokyo, Otome Road.</li>
-          <li><strong>Gundam Base Tokyo</strong>, Odaiba: kits including exclusives, with the Unicorn outside.</li>
+          <li><strong>Gundam Base Tokyo</strong>, Odaiba: kits including exclusives. The Unicorn statue outside was retired in August 2026.</li>
         </ul>
       </div>
       <div class="panel">
@@ -634,9 +703,9 @@ footer .wrap{padding-bottom:env(safe-area-inset-bottom)}
         <ul>
           <li><strong>Sat 6 Feb</strong>: guided izakaya crawl. Someone ordering for you across five or six places is the fastest way to work out what you like.</li>
           <li><strong>Sat 13 Feb</strong>: Golden Gai and Kabukicho on your own. Shoebox bars with six seats and a cover charge, which is the whole point.</li>
-          <li><strong>Omoide Yokocho</strong> is the easy default any night, and it's a walk from the hotel.</li>
+          <li><strong>Omoide Yokocho</strong> is the easy default any night: a 20-minute walk from the hotel, or two stops on the Oedo.</li>
           <li>Nomihodai sets run <span data-yen="1500-2500" data-approx></span> for a fixed time if you want a cheap night.</li>
-          <li>Everything above is within walking distance of a Shinjuku base. That was most of the reason for picking it.</li>
+          <li>Golden Gai and Kabukicho are about 30 minutes' walk from the hotel, so plan on a taxi home, ten minutes and about <span data-yen="1500" data-approx></span>. The last Oedo trains run shortly after midnight.</li>
         </ul>
       </div>
       <div class="panel">
@@ -644,8 +713,9 @@ footer .wrap{padding-bottom:env(safe-area-inset-bottom)}
         <ul>
           <li>Four sessions each, spread out: after the flight, after Ebisu, after the first big night, and near the end.</li>
           <li>Neighbourhood shiatsu chains are <span data-yen="3000-6000" data-approx></span> an hour and far cheaper than anything the hotel offers.</li>
-          <li><strong>Thermae-yu</strong> in Shinjuku is a real onsen with actual hot spring water, walkable from the base.</li>
-          <li>Public sento are about <span data-yen="550" data-approx></span>. Tattoos can be an issue at some, Thermae-yu included, so check before you go.</li>
+          <li>The <strong>hotel's own bath</strong>, with an open-air tub, is free for guests, 15:00 to 02:00 and 06:00 to 10:00. That covers most of the soaking.</li>
+          <li><strong>Thermae-yu</strong> in Kabukicho is a real onsen with actual hot spring water, ten minutes' walk from Higashi-shinjuku on the Oedo.</li>
+          <li>Public sento are about <span data-yen="550" data-approx></span>. Tattoos can be an issue at some, Thermae-yu included, so check before you go, and ask at the hotel's front desk too.</li>
         </ul>
       </div>
       <div class="panel">
@@ -660,11 +730,11 @@ footer .wrap{padding-bottom:env(safe-area-inset-bottom)}
       <div class="panel">
         <h3>Why one hotel <span class="jp">拠点</span></h3>
         <ul>
-          <li>Eighteen nights, zero repacking, zero luggage forwarding, zero check-in admin.</li>
-          <li>Shinjuku has the Narita Express direct, plus the JR, Odakyu and Metro lines every day trip on this plan uses.</li>
-          <li>Both big nights out end within walking distance of your bed.</li>
+          <li>Eighteen nights, no luggage forwarding, and at most one room move on the 13th if the two bookings can't be joined.</li>
+          <li>The Oedo line is a minute from the door, and Shinjuku is two stops away. The Narita Express, JR, Odakyu and the Fuji-Q bus all leave from there.</li>
+          <li>The big nights out end in a ten-minute taxi rather than a walk, which is the price of a quieter street.</li>
           <li>Purchases pile up in one room, which makes the shipping day on the 17th far simpler.</li>
-          <li>Book a twin with free cancellation and you can still change your mind.</li>
+          <li>A free hot bath downstairs at the end of every day.</li>
         </ul>
       </div>
     </div>
@@ -720,7 +790,7 @@ footer .wrap{padding-bottom:env(safe-area-inset-bottom)}
       <li><label for="c1"><input type="checkbox" id="c1" checked><span>Flights booked: Perth to Narita return, 1 to 19 Feb 2027. Check the second ticket is on the identical itinerary. <span class="when">Done 22 Sep 2026</span></span></label></li>
       <li><label for="c2"><input type="checkbox" id="c2"><span>Get the <strong>International Driving Permits</strong> from the RAC, 1949 Geneva Convention, on paper. Everything on Day 5 depends on this and it can't be sorted in Japan. <span class="when">Do this first</span></span></label></li>
       <li><label for="c3"><input type="checkbox" id="c3"><span>Buy travel insurance now the flights are ticketed, so cancellation cover starts.</span></label></li>
-      <li><label for="c4"><input type="checkbox" id="c4"><span>Book the Shinjuku twin for all 18 nights, with free cancellation. One property, one booking, walkable to Golden Gai and Omoide Yokocho. <span class="when">Prices climb from about November</span></span></label></li>
+      <li><label for="c4"><input type="checkbox" id="c4" checked><span>Hotel booked: APA Hotel &amp; Resort Nishishinjuku Gochome Ekimae Tower, 1–13 Feb and 13–19 Feb. At check-in on the 1st, ask for the two bookings to be joined so you keep the same room. <span class="when">Booked</span></span></label></li>
       <li><label for="c5"><input type="checkbox" id="c5"><span>Book the OnlyJDM self-drive convoy for <strong>Friday 5 Feb</strong>, two drivers. Confirm the three-year rule against both licence issue dates when you book.</span></label></li>
       <li><label for="c6"><input type="checkbox" id="c6"><span>Book the Ebisu <strong>AE86 Ride &amp; Drive</strong> for <strong>Tuesday 9 Feb</strong>, not the 11th, which is a public holiday. It's a newer product than the plain hot laps, so confirm it's running on your date and that the IDP covers you to drive it.</span></label></li>
       <li><label for="c7"><input type="checkbox" id="c7"><span>Book the izakaya crawl for Sat 6 Feb and Fuji-Q for Fri 12 Feb. Nothing else needs booking ahead, and Day 15 is deliberately open.</span></label></li>
@@ -736,7 +806,7 @@ footer .wrap{padding-bottom:env(safe-area-inset-bottom)}
 
 <footer>
   <div class="wrap wrap--pad">
-    <p>Flight details and prices checked September 2026. Anything with a <strong>~</strong> is an estimate, so check before booking.</p>
+    <p>Flight details and prices checked September 2026, hotel and routes October 2026. Anything with a <strong>~</strong> is an estimate, so check before booking.</p>
   </div>
 </footer>
 
